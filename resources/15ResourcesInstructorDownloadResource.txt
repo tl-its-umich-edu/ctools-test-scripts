@@ -1,0 +1,30 @@
+comment|Download resource and check content as instructor.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Resources
+verifyText|$instDisplayName
+verifyText|Resources
+
+downloadFile|test.pdf
+verifyFile|test.pdf
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

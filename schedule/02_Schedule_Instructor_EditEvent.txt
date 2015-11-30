@@ -1,0 +1,62 @@
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Schedule
+verifyText|Schedule
+verifyText|$instUser
+verifyText|Calendar by Week
+selectList|View|List of Events
+verifyValue|View|List of Events
+verifyText|List of Events
+verifyText|Custom date range
+selectList|customStartMonth|JUL
+selectList|customStartDay|1
+selectList|customStartYear|2014
+selectList|customEndMonth|SEP
+selectList|customEndDay|16
+selectList|customEndYear|2016
+verifyValue|customStartMonth|JUL
+verifyValue|customStartDay|1
+verifyValue|customStartYear|2014
+verifyValue|customEndMonth|SEP
+verifyValue|customEndDay|16
+verifyValue|customEndYear|2016
+
+click|Filter Events
+verifyText|Scheduled event message for $instDisplayName
+verifyText|Academic Calendar
+
+click|Team Meeting
+verifyText|Jul 19, 2014
+verifyText|Team Meeting
+VerifyText|Event Location
+
+click|Edit
+verifyText|Editing event
+verifyText|Frequency
+selectList|startMinute|30
+verifyValue|startMinute|30
+
+click|Save Event
+verifyText|Schedule
+verifyText|4:30 pm
+verifyText|Team Meeting
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

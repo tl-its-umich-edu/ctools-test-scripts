@@ -1,0 +1,48 @@
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Syllabus
+verifyText|Syllabus
+verifyText|$instUser
+
+click|Create/Edit
+verifyText|Syllabus Items
+verifyText|Selenium Syllabus
+verifyText|Draft Syllabus
+verifyText|Attach a Syllabus
+verifyText|Posted
+
+selectCheckbox|Select to Remove|1
+selectCheckbox|Select to Remove|2
+selectCheckbox|Select to Remove|3
+
+click|Update
+verifyText|Deleting selected items
+verifyText|Are you sure you want to delete the specified item(s)?
+verifyText|Selenium Syllabus
+verifyText|Draft Syllabus
+verifyText|Attach a Syllabus
+
+click|Delete
+verifyText|Syllabus Items
+verifyTextNotPresent|Selenium Syllabus
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText
+

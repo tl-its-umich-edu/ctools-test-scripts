@@ -1,0 +1,33 @@
+application|signup
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$testDupeSite
+verifyText|Site Information Display
+verifyText|Course site that acts as a duplicate for sites that require stealth tools.
+
+click|Schedule
+verifyText|Calendar by Week
+verifyText|Sample Course Appointment
+
+click|Sample Course Appointment (0 attendees)
+verifyText|Sample Course Appointment
+verifyText|This is a sample appointment, used when testing the Sign-up tool.
+verifyText|$instDisplayName
+verifyText|The Diag
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

@@ -1,0 +1,40 @@
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Polls
+verifyText|Poll list
+verifyText|$instUser
+verifyText|Add
+
+click|Results|1
+verifyText|Results
+verifyText|What is your favorite color?
+verifyText|$instUser
+verifyText|Blue
+verifyText|1
+comment|verifyText|33%
+verifyText|50%
+
+click|Back
+verifyText|Poll list
+verifyText|What is your favorite color?
+verifyText|$instUser
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

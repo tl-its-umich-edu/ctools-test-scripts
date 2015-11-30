@@ -1,0 +1,38 @@
+comment|Check changes to Honor Council page text and verify link works as instructor.
+ 
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Engineering Honor Code
+verifyText|$instDisplayName
+verifyText|Engineering Honor Code
+verifyText|Some edit.
+
+click|Options
+verifyText|$instDisplayName
+verifyText|Customize Instruction Info Display
+ckEnter|Description|Click the Options item in the toolbar to enter your class specific honor policies here. 
+
+click|Update Options
+verifyText|$instDisplayName
+verifyText|Engineering Honor Code
+verifyText|Click the Options item in the toolbar to enter your class specific honor policies here.
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

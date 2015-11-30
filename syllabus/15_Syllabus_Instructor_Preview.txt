@@ -1,0 +1,54 @@
+application|syllabus
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Syllabus
+verifyText|Syllabus
+verifyText|$instUser
+
+click|Create/Edit
+verifyText|Syllabus Item
+
+Click|Add
+verifyText|Add syllabus...
+verifyText|Title
+verifyValue|Only members of this site can see this syllabus item.|true
+verifyText|Email Notification
+enterText|Title|Preview Syllabus
+ckEnter|Content|Sample Syllabus to sample preview capability
+
+Click|Preview
+VerifyText|Preview Syllabus Item
+verifyText|Preview Syllabus
+verifyText|Sample Syllabus to sample preview capability
+
+comment|We don't need to save this preview, so just cancel it's creation
+click|Edit
+VerifyText|Add syllabus...
+VerifyText|Title
+verifyValue|Only members of this site can see this syllabus item.|true
+VerifyText|Email Notification
+
+click|Cancel
+verifyText|Syllabus Items
+verifyText|$instUser
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

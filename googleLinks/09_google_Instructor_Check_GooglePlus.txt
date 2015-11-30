@@ -1,0 +1,44 @@
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|M+Google
+comment|Should pop-up the list of google links
+click|Google+
+
+comment|This should launch the google plus interface, which requires an additional sign-in
+waitForPopUp|30
+
+comment|This used to require an additional sign-in.  But no longer does.
+comment|verifyText|Sign in with your Google Account
+comment|click|Sign in
+
+comment|verifyText|Google+
+comment|verifyText|Sign in and start sharing with Google+
+comment|enterText|Email|$studUser@umich.edu
+
+comment|click|Sign in
+
+verifyText|Home
+verifyText|Friends
+verifyText|$instUser@umich.edu
+
+comment|Once we have confirmed the google plus window, shut it down and log out.
+closePopUp|
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText
+

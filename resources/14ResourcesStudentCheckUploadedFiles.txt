@@ -1,0 +1,46 @@
+comment|Check files as student.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Resources
+verifyText|$studDisplayName
+verifyText|Resources
+verifyTextNotPresent|Permissions
+verifyText|Access
+verifyText|test folder edit
+
+click|FakeAssignment.doc
+verifyFile|FakeAssignment.doc
+
+verifyText|Presentation1.pptx
+
+click|test.doc
+verifyFile|test.doc
+
+click|test.docx
+verifyFile|test.docx
+
+verifyText|test.jpeg
+verifyText|test.txt
+
+verifyText|Workbook1.xlsx
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

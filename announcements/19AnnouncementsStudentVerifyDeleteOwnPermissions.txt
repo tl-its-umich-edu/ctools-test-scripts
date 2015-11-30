@@ -1,0 +1,42 @@
+comment|Verify Permissions to delete own Announcements as Student
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Announcements
+verifyText|View
+verifyText|Announcements
+verifyText|viewing announcements from the last 365 days
+
+comment|To verify Permission to delete own resource
+click|Test Announcement Student edit
+verifyText|Announcement
+verifyText|Test Announcement Student edit
+verifyText|Remove
+
+click|Remove
+verifyText|Deleting announcements
+verifyText|Are you sure you want to delete the following announcements?
+verifyText|Test Announcement Student edit
+
+click|Remove
+verifyTextNotPresent|Test Announcement Student edit
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

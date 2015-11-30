@@ -1,0 +1,42 @@
+comment|Delete resource in drop box and check as instructor.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Drop Box
+verifyText|$instDisplayName
+verifyText|Drop Box
+verifyText|individual dropboxes with recent changes:
+verifyText|testfile_10MB
+verifyText|10 MB
+
+selectCheckbox|selectedMembers|3
+
+click|Remove
+verifyText|Are you sure you want to remove the following item(s)?
+verifyText|Remove confirmation... 
+verifyText|testfile_10MB
+verifyText|10 MB
+
+click|Remove
+verifyText|Drop Box
+verifyTextNotPresent|testfile_10MB
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

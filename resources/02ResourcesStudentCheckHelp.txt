@@ -1,0 +1,34 @@
+comment|Check help text as student.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Resources
+verifyText|$studDisplayName
+verifyText|Resources
+
+click|Help for Resources
+waitForPopUp|30
+verifyText|Resources
+verifyText|Search Help
+verifyText|Resources is the most widely used tool in classes and collaborations. In Resources, you can make many kinds of materials available online. 
+closePopUp|
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

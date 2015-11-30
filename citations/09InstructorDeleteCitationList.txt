@@ -1,0 +1,57 @@
+
+openURL|$url
+verifyText|$gatewayText
+
+click|ctoolsLogin
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Resources
+verifyText|$instDisplayName
+verifyText|Resources
+
+click|Citation folder
+verifyText|Resources / Citation folder
+verifyText|Automated Test Citations
+
+click|Actions|2
+
+
+selectCheckbox|selectedMembers
+click|Remove
+
+verifyText|Are you sure you want to remove the following item(s)?
+verifyText|Remove confirmation...
+verifyText|Automated Test Citations
+ 
+click|Remove
+
+verifyText|Resources / Citation folder
+verifyTextNotPresent|Automated Test Citations
+
+click|Up one level
+verifyText|Citation folder
+
+selectCheckbox|selectedMembers
+click|Remove
+verifyText|Are you sure you want to remove the following item(s)?
+verifyText|Remove confirmation...
+verifyText|Citation folder
+
+click|Remove
+verifyTextNotPresent|Citation folder
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

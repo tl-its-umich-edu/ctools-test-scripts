@@ -1,0 +1,53 @@
+application|testcenter
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Test Center
+verifyText|Assessments
+verifyText|No Assessments are defined
+
+click|Question Pools
+verifyText|Question Pools
+verifyText|Combine
+
+click|Add Pool
+verifyText|Edit Pool
+verifyText|Difficulty
+enterText|Pool Title|Test Pool
+ckEnter|Description|This is a sample question pool
+verifyText|This is a sample question pool
+enterText|Point Value|105
+selectRadio|Level 2
+verifyValue|Level 2|true
+
+click|Done
+verifyText|Test Pool
+verifyText|105
+verifyText|Edit Pool Properties
+
+comment|Return to list of question pools
+click|Done
+verifyText|Question Pools
+verifyText|Test Pool
+verifyText|Test Center
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText
+

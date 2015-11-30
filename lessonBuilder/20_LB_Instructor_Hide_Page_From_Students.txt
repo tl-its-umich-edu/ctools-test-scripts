@@ -1,0 +1,41 @@
+application|lessonbuilder
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+comment|verifyText|A basic course created during automated testing
+
+click|Lesson Builder
+verifyText|LB Automated Test-Custom Content
+
+click|SubPage1
+verifyText|SubSubPage1
+
+click|edit-title
+verifyText|Hide this page from users
+selectCheckbox|hide
+click|command link parameters&Submitting%20control=create-title&Fast%20track%20action=simplePageBean.editTitle
+
+verifyText|This page is currently hidden from standard users. You can change this in the Settings window.
+
+click|Reset
+verifyTextNotPresent|This page is currently hidden from standard users. You can change this in the Settings window.
+verifyText|LB Automated Test-Custom Content
+verifyText|SubPage1 [Hidden]
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

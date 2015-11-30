@@ -1,0 +1,58 @@
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Test Center
+verifyText|Assessments
+verifyText|Sample Assessment
+verifyText|Pool Assessment
+
+comment|This selects all non-live assessments and deletes them.
+comment|The Sample Assessment is live with submissions, so it won't be deleted.
+selectCheckbox|all_a25
+
+click|Delete
+verifyText|Are you sure you want to delete the selected assessments?
+
+click|Delete
+verifyText|Sample Assessment
+verifyValue|all_a25|false
+
+comment|This selects all remaining assessments and archives them.
+selectCheckbox|all_a25
+
+click|Archive
+verifyText|Are you sure you want to archive the selected assessments?
+
+click|Archive
+verifyText|No Assessments are defined
+
+click|Question Pools
+verifyText|Question Pools
+verifyText|Test Pool
+
+comment|This selects all question pools and deletes them.
+selectCheckbox|all_a6
+click|Delete
+verifyText|Are you sure you want to delete the selected pools?
+click|Delete
+verifyText|There are no pools defined
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText
+

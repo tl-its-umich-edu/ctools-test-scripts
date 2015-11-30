@@ -1,0 +1,32 @@
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Chat Room
+verifyText|Only messages from the past 3 days are archived and can be read by any site participant. 
+verifyText|Currently viewing messages for 'Secondary Chat Room'
+verifyText|Fourth Test Message
+verifyText|Enter chat message
+
+enterText|Enter chat message|Instructor test message that should not exist
+click|Clear
+verifyText|$studDisplayName
+verifyTextNotPresent|Instructor test message that should not exist
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

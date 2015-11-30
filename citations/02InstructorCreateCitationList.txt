@@ -1,0 +1,47 @@
+comment|Modify details of a folder as instructor.
+
+openURL|$url
+verifyText|$gatewayText
+
+click|ctoolsLogin
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Resources
+verifyText|$instDisplayName
+verifyText|Resources
+
+click|Citation folder
+verifyText|Resources / Citation folder
+
+click|Add
+
+click|Add Citation List
+verifyText|New Citation List
+verifyText|Citation Count
+
+click|Review Citation List
+verifyText|New Citation List
+verifyText|to add citations to this list
+
+click|Continue
+verifyText|Add Citation List
+
+enterText|displayName|Automated Test Citation List
+click|Finish
+verifyText|Automated Test Citation List
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

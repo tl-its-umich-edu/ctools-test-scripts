@@ -1,0 +1,31 @@
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$projDupeSite
+verifyText|Site Information Display
+verifyText|A project site meant to be used as a source for duplication during testing.
+
+click|Search
+verifyText|This Site
+
+click|Help for Search
+waitForPopUp|30
+verifyText|USING THE TOOLS - Integrated UM and External Tools
+verifyText|Search Help
+verifyText|$helpText
+closePopUp|
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

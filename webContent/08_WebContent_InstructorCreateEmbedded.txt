@@ -1,0 +1,39 @@
+comment|Create web content as an instructor. Web link displays within Ctools page. In this case, it's the Google search page.
+comment| This test currently fails due to the mixed content bug with newer browsers
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Web Content
+
+click|Edit
+verifyText|Customize Web Content
+verifyText|Frame Height
+enterText|title|Wikipedia Tool
+enterText|title-of-page|Wikipedia Page
+enterText|source|https://www.wikipedia.org
+
+click|Update Options
+verifyText|Find Wikipedia in a language
+
+click|Home
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

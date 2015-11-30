@@ -1,0 +1,31 @@
+comment|Check group 2 resource as group member.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUserc
+enterText|password|rubleitoonoicH?
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Resources
+verifyText|QA Studc
+verifyText|Resources
+verifyTextNotPresent|Permissions
+verifyText|Access
+verifyText|folder group 2
+verifyTextNotPresent|folder group 1
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

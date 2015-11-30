@@ -1,0 +1,34 @@
+application|lecturetools
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Lecture Tools
+verifyText|Welcome to LectureTools
+verifyText|Click the button
+
+click|Enter LectureTools
+waitForPopUp|30
+verifyText|Welcome CTools Instructor
+verifyText|To connect your CTools course
+verifyText|$site
+closePopUp
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

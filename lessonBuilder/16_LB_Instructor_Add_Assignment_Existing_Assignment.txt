@@ -1,0 +1,45 @@
+application|lessonbuilder
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+comment|verifyText|A basic course created during automated testing
+
+click|Lesson Builder
+verifyText|LB Automated Test-Custom Content
+
+click|Add Assignment
+verifyText|Pick an Assignment
+verifyText|LB Long Assignment
+verifyTextNotPresent|There are no assignments available in this site.
+
+click|Use selected item
+verifyText|LB Automated Test-Custom Content
+verifyText|LB Long Assignment
+
+click|LB Long Assignment
+verifyText|Return to Lesson
+verifyText|WARNING: Make sure you save or submit your work before returning.
+verifyText|Honor Pledge: I have neither given nor received aid on this assignment
+verifyText|Additional resources for assignment
+
+click|Return to Lesson
+verifyText|LB Automated Test-Custom Content
+
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

@@ -1,0 +1,84 @@
+comment|create Group specific assignements
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Assignments
+verifyText|Assignment List
+
+comment|Create an assignment for Group 1.
+click|Add
+verifyText|Add new assignment
+verifyText|Complete form and then choose 'post' at the bottom.
+verifyText|Additional information
+verifyText|Model Answer
+enterText|new_assignment_title|Group 1 Assignment
+selectList|new_assignment_openampm|AM
+verifyValue|new_assignment_openampm|AM
+verifyValue|subType|Inline and Attachments
+verifyValue|new_assignment_grade_type|Ungraded
+selectList|new_assignment_grade_type|Letter grade
+verifyValue|new_assignment_grade_type|Letter grade
+ckEnter|Assignment Instructions|This is an assignment for Group 1.
+selectCheckbox|Add honor pledge
+selectRadio|Display to selected groups
+verifyValue|Add honor pledge|true
+verifyValue|Display to selected groups|true
+verifyText|Group 1
+selectCheckbox|Group 1
+verifyValue|Group 1|true
+verifyValue|Group 2|false
+
+click|Post
+verifyText|Assignment List
+verifyText|Group 1 Assignment 
+verifyText|A-F
+
+comment|Create a assignment for Group 2.
+click|Add
+verifyText|Add new assignment
+verifyText|Complete form and then choose 'post' at the bottom.
+verifyText|Additional information
+verifyText|Model Answer
+enterText|new_assignment_title|Group 2 Assignment
+selectList|new_assignment_openampm|AM
+verifyValue|new_assignment_openampm|AM
+verifyValue|subType|Inline and Attachments
+verifyValue|new_assignment_grade_type|Ungraded
+selectList|new_assignment_grade_type|Points
+verifyValue|new_assignment_grade_type|Points
+enterText|new_assignment_grade_points|100
+ckEnter|Assignment Instructions|This is an assignment for Group 2.
+selectCheckbox|Add honor pledge
+selectRadio|Display to selected groups
+verifyValue|Add honor pledge|true
+verifyValue|Display to selected groups|true
+verifyText|Group 2
+selectCheckbox|Group 2
+verifyValue|Group 2|true
+verifyValue|Group 1|false
+
+click|Post
+verifyText|Assignment List
+verifyText|Group 2 Assignment 
+verifyText|100
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText
+

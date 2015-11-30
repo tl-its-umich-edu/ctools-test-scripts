@@ -1,0 +1,33 @@
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$testDupeSite
+verifyText|Site Information Display
+verifyText|Course site that acts as a duplicate for sites that require stealth tools.
+
+click|Discussion
+verifyText|Expand All
+
+verifyValue|View:|Row Layout
+selectList|View:|Column Layout
+verifyText|Instructor Test Topic in New Category
+verifyValue|View:|Column Layout
+
+selectList|View:|Row Layout
+verifyText|Instructor Test Topic in New Category
+verifyValue|View:|Row Layout
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText
