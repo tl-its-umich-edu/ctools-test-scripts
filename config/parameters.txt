@@ -1,16 +1,16 @@
-downloadDirectory=/storage/tests/downloads/
-fileDirectory=/storage/tests/files/
-logDirectory=/storage/tests/logs/
+downloadDirectory=c:\test-files\downloads\
+fileDirectory=c:\test-files\files\
+logDirectory=c:\test-files\logs\
 
-testList=/storage/tests/testList.txt
-variablesFile=/storage/tests/variables.txt
-xpathFile=/storage/tests/xpaths.xml
+testList=c:\ctools-test-scripts\config\testList.txt
+variablesFile=c:\ctools-test-scripts\config\variables.txt
+xpathFile=c:\ctools-test-scripts\config\xpaths.xml
 
 timeout=10
 timingData=true
 
-OS=linux
+OS=windows
 browser=firefox
 
-chromeExecutable=/storage/builds/Selenium/chromedriver
+chromeExecutable=c:\ctools-test-scripts\config\chromedriver
 mimeTypes=text/comma-separated-values,application/vnd.ms-excel,application/pdf,application/msword,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document
