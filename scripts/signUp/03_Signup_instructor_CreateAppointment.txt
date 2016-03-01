@@ -28,8 +28,8 @@ enterText|Location:|The Diag
 ckEnter|Description:|This is a sample appointment, used when testing the Sign-up tool.
 comment|wait|3
 
-enterText|meeting:endTime.year|2016
-verifyValue|meeting:endTime.year|2016
+enterText|meeting:endTime.year|2018
+verifyValue|meeting:endTime.year|2018
 verifyValue|meeting:siteSelection|true
 
 click|Next
