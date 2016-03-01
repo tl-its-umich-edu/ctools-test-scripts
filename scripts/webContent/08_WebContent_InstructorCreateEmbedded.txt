@@ -26,7 +26,7 @@ enterText|title-of-page|Wikipedia Page
 enterText|source|https://www.wikipedia.org
 
 click|Update Options
-verifyText|Find Wikipedia in a language
+verifyText|Find a language
 
 click|Home
 verifyText|Site Information Display

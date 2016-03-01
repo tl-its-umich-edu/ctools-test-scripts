@@ -17,7 +17,7 @@ verifyText|Site Information Display
 verifyText|Recent Announcements
 
 click|Wikipedia Page
-verifyText|Find Wikipedia in a language
+verifyText|Find a language
 
 click|Home
 verifyText|Site Information Display

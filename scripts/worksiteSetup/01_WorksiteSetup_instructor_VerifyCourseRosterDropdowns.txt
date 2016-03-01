@@ -33,10 +33,11 @@ comment|Subject list box
 verifyContents|Subject:|Administration
 selectList|Subject:|Accounting
 comment|Course list box, sometimes takes a second to populate.
-selectList|Course:|300 (Financial Acctg)
+wait|4
+selectList|Course:|301 (Managerial Acctg)
 comment|Section list box, sometimes takes a second to populate.
 wait|2
-verifyContents|Section:|001 (Financial Acctg)
+verifyContents|Section:|001 (Managerial Acctg)
 
 comment|This will cancel this process and bring you back to a list of sites.
 click|Cancel
