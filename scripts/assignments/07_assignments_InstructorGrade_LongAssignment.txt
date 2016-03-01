@@ -29,7 +29,7 @@ verifyText|Ungraded
 comment|Open submission for the $studDisplayName
 comment|clickXpath|//td[contains(text(),'$studUser')]/div/a
 comment|clickXpath|//td[contains(text(),$studLastFirstID)]/div/a
-click|Grade|5
+click|Grade submission|4
 verifyText|Long Assignment - Grading
 verifyText|Important Reminder: Please do not grade assignments with multiple browser windows or tabs.
 verifyText|$studUser
@@ -62,10 +62,10 @@ verifyValue|allowResToggle|true
 verifyText|Number of resubmissions allowed
 selectList|Number of resubmissions allowed|Unlimited
 selectList|allow_resubmit_closeMonth|DEC
-selectList|allow_resubmit_closeYear|2015
+selectList|allow_resubmit_closeYear|2016
 verifyValue|Number of resubmissions allowed|Unlimited
 verifyValue|allow_resubmit_closeMonth|DEC
-verifyValue|allow_resubmit_closeYear|2015
+verifyValue|allow_resubmit_closeYear|2016
 
 
 click|Save and Release to Student
