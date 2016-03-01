@@ -1,0 +1,36 @@
+comment|Check bookseller information as student.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+wait|1
+click|Textbooks
+verifyText|$studDisplayName
+verifyText|Course Textbook List
+verifyText|- Textbook list to be determined
+
+click|Booksellers
+waitForPopup|30
+verifyText|Local Booksellers
+verifyText|Faculty have the option to designate a recommended local bookseller when they create the textbook list for their course. 
+verifyText|Barnes & Noble @ the University of Michigan Bookstore
+closePopUp|
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

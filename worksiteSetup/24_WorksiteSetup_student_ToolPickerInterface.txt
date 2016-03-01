@@ -1,0 +1,93 @@
+application|worksitesetup
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|Worksite Setup
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+
+comment|Create a project site.
+click|New
+verifyText|Site Type
+verifyText|Build your own site
+verifyText|Create site from template
+selectRadio|project site
+
+click|Continue
+verifyText|Please answer the following to help us understand how CTools is being used for this project site.
+verifyText|In what capacity are you creating this site? 
+verifyText|The primary purpose for this project site will be: 
+selectRadio|Student
+selectRadio|Group project (e.g., course project, writing group, professional development)
+
+click|Continue
+verifyText|Project Site Information
+verifyText|Enter basic information about the project site...
+enterText|Site Title|$project_site
+ckEnter|Description|A basic project site created during automated testing.  This is a description.
+enterText|Short Description|An even shorter description
+verifyText|$studDisplayName
+click|Continue
+
+comment|Should be on the list of tools
+verifyText|Project Site Tools
+verifyText|Choose tools to include on your site...
+verifyText|Re-use Material from Other Sites You Own 
+selectCheckbox|Announcements
+click|Assessments
+selectCheckbox|Assignments
+click|Social Interactions
+selectCheckbox|Chat Room
+click|Site Management
+selectCheckbox|Textbooks
+click|Library
+selectCheckbox|Library Help
+click|Plugin Tools
+selectCheckbox|Active Learning Platform
+
+comment|Verify that all of the expected checkboxes are checked. 
+verifyValue|Announcements|true
+verifyValue|Assignments|true
+verifyValue|Chat Room|true
+verifyValue|Textbooks|true
+verifyValue|Library Help|true
+verifyValue|Active Learning Platform|true
+
+comment|Click the red xs on the right of the page and ensure each tool is removed. 
+clickXPath|//*[@id="sakai_announcements"]/a
+wait|1
+verifyValue|Announcements|false
+clickXPath|//*[@id="sakai_assignment_grades"]/a
+wait|1
+verifyValue|Assignments|false
+clickXPath|//*[@id="sakai_chat"]/a
+wait|1
+verifyValue|Chat Room|false
+clickXPath|//*[@id="sakai_tbook"]/a
+wait|1
+verifyValue|Textbooks|false
+clickXPath|//*[@id="ctools_iframe_libhelp"]/a
+wait|1
+verifyValue|Library Help|false
+clickXPath|//li[starts-with(@id,"lti_") and @style="display: list-item;"]/a
+verifyValue|Active Learning Platform|false
+
+click|Community Announcements
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText
+
+
+

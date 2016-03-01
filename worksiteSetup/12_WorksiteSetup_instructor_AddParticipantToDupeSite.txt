@@ -1,0 +1,59 @@
+application|worksitesetup
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|Worksite Setup
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+selectCheckbox|$testDupeSite
+
+click|Edit
+verifyText|$testDupeSite
+verifyText|$instUser
+verifyText|Course site that acts as a duplicate for sites that require stealth tools.
+verifyText|Can read, add, and revise content on sites in a particular department
+
+comment|Add the selenium student to the course.
+click|Add Participants
+verifyText|Add Participants
+verifyText|Enter multiples each on separate line
+verifyValue|Assign all participants to the same role|true
+enterText|Official Email Address or Username|$studUser
+
+click|Continue
+verifyText|Choose a Role for Participants
+verifyValue|Student|false
+verifyText|$studUser
+selectRadio|Student
+
+comment|Should email go to the participant?
+click|Continue
+verifyText|Add participant(s) to
+verifyText|do not send an email notifying new participants
+verifyValue|Send Now|false
+
+comment|Confirmation screen
+click|Continue
+verifyText|Confirming Add Participant(s) to My Workspace
+verifyText|$studUser
+
+click|Finish
+comment|Back at participant page
+verifyText|$testDupeSite
+verifyText|Course site that acts as a duplicate for sites that require stealth tools.
+verifyText|$studUser
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText
