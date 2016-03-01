@@ -42,7 +42,7 @@ verifyText|Example Event 3
 
 click|Example Event 1
 verifyText|Example Event 1
-verifyText|Jul 2, 2011
+verifyText|Jul 2, 2016
 
 click|Remove event
 verifyText|Are you sure you want to remove this event?
@@ -58,7 +58,7 @@ verifyTextNotPresent|Example Event 1
 click|Example Event 2
 verifyText|Taubman Library 2919
 verifyText|Example Event 2
-verifyText|Jul 8, 2011
+verifyText|Jul 8, 2016
 
 click|Remove event
 verifyText|Are you sure you want to remove this event?
@@ -71,7 +71,7 @@ verifyText|Academic Calendar
 click|Example Event 3
 verifyText|Taubman Library 2919
 verifyText|Example Event 3
-verifyText|Aug 2, 2011
+verifyText|Aug 2, 2016
 
 click|Remove event
 verifyText|Are you sure you want to remove this event?
