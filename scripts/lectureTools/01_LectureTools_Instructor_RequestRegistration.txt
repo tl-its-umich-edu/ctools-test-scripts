@@ -16,7 +16,7 @@ click|$site
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
-click|Lecture Tools
+click|Active Learning Platform
 verifyText|Welcome to LectureTools
 verifyText|Click the button
 

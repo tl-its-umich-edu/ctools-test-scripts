@@ -1,0 +1,34 @@
+application|worksitesetup
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|Worksite Setup
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+selectCheckbox|$site
+selectCheckbox|Testing SiteDupe
+
+click|Delete
+verifyText|You have selected the following sites for removal: 
+verifyText|$site
+verifyText|Testing SiteDupe
+
+click|Remove
+verifyTextNotPresent|$site
+verifyTextNotPresent|Testing SiteDupe
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

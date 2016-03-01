@@ -27,7 +27,7 @@ enterText|Title:|Sample Project Appointment
 enterText|Location:|The Big House
 ckEnter|Description:|This is a sample appointment, used when testing the Sign-up tool.
 wait|2
-enterText|meeting:endTime.year|2016
+enterText|meeting:endTime.year|2018
 verifyValue|meeting:siteSelection|true
 
 click|Next

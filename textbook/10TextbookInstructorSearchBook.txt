@@ -1,0 +1,53 @@
+comment|Search for a book as instructor.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+wait|1
+click|Textbooks
+verifyText|$instDisplayName
+verifyText|Course Textbook List
+verifyText|- Textbook list to be determined
+
+click|UBook
+verifyText|Buy used textbooks, put your own up for sale. You can get in touch with sellers and buyers and arrange the transaction via email. Access the list of books you have offered for sale above or here:
+enterText|buy_book_title|Amerika
+
+click|buy_book_button
+verifyText|UBook- Offers
+verifyText|The following offers are listed by price from low to high. Contact the seller via email.
+verifyText|$studEmail
+verifyText|new copy
+verifyText|10.00
+
+click|Reset
+verifyText|Course Textbook List
+
+click|UBook
+verifyText|Buy used textbooks, put your own up for sale. You can get in touch with sellers and buyers and arrange the transaction via email. Access the list of books you have offered for sale above or here:
+enterText|buy_book_isbn|978-0805210644
+
+click|buy_book_isbn_button
+verifyText|Amerika
+verifyText|$studEmail
+verifyText|new copy
+verifyText|10.00
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

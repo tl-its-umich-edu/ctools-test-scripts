@@ -1,0 +1,50 @@
+application|worksitesetup
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|Worksite Setup
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+selectCheckbox|$projDupeSource
+
+click|Edit
+verifyText|$projDupeSource
+verifyText|$studUser
+verifyText|A project site meant to be used as a source for duplication during testing
+verifyText|Can read, revise, delete, and add their own content to a site
+
+comment|Duplicate Site
+click|Duplicate Site
+verifyText|Duplicate site
+verifyText|$projDupeSource
+enterText|Site Title|$projDupeSite
+
+comment|This duplicates the site, but takes you back to the last page
+click|Duplicate
+verifyText|$projDupeSource
+verifyText|$studUser
+verifyText|A project site meant to be used as a source for duplication during testing
+verifyText|Organizer
+verifyText|Can read, revise, delete, and add their own content to a site
+
+click|Return to Sites List
+verifyText|$projDupeSite
+
+comment|Open site to make sure it exists.
+click|$projDupeSite
+verifyText|A project site meant to be used as a source for duplication during testing
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

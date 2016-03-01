@@ -52,10 +52,10 @@ selectList|customEndMonth|SEP
 selectList|customEndDay|16
 selectList|customEndYear|2016
 click|Filter Events
-verifyText|JUL 2, 2014
+verifyText|JUL 2, 2016
 verifyText|Example Event 1
 verifyText|Example Event 2
-verifyText|JUL 16, 2014
+verifyText|JUL 16, 2016
 verifyText|Example Event 3
 
 click|Logout
