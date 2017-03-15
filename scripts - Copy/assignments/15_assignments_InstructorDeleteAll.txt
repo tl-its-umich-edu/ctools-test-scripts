@@ -1,0 +1,34 @@
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Assignments
+verifyText|Assignment List
+verifyText|Viewing
+verifyText|Edit
+verifyText|Viewing 1 -
+captureText|Viewing 1 -|of|numAssigns
+
+loopWhile|numAssigns
+loop|selectCheckbox|Remove
+loop|click|Update
+loop|click|Delete
+endloop
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

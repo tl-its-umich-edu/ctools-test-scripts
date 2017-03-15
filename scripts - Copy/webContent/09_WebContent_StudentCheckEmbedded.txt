@@ -1,0 +1,30 @@
+comment|Check created web content as a student where web link is displayed within Ctools page.
+comment|This test currently fails due to the mixed content bug in newer browsers
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Wikipedia Page
+verifyText|Find a language
+
+click|Home
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

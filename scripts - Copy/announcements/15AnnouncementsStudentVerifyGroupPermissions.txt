@@ -1,0 +1,34 @@
+comment|Verify Permissions to access Announcements across groups as Student
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Announcements
+verifyText|View
+verifyText|Announcements
+verifyText|viewing announcements from the last 365 day
+verifyText|Test Announcement Group 2
+
+comment|To verify access to group announcements
+click|Test Announcement Group 2
+verifyText|Announcement
+verifyText|This is a test announcement for Group 2
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

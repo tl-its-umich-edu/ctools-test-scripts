@@ -1,0 +1,35 @@
+comment|Change language in preferences as instructor.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|Preferences
+verifyText|Customize Tabs
+verifyText|Drag and drop items with the mouse.
+
+click|Language
+verifyText|Please select your language (and country) preference. Your current language preference is: English (United States)
+selectList|locale_form:_id35|French (France)
+
+click|Update Preferences
+verifyText|Personnaliser les onglets
+verifyText|actuelle pour la langue est : French (France)
+
+selectList|locale_form:_id35|English (United States)
+click|locale_form:submit
+verifyText|Please select your language (and country) preference. Your current language preference is: English (United States)
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

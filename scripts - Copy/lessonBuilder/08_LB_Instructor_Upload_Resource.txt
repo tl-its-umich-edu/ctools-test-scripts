@@ -1,0 +1,33 @@
+application|lessonbuilder
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+comment|verifyText|Course site that acts as a duplicate for sites that require stealth tools.
+
+click|Lesson Builder
+verifyText|LB Automated Test-Custom Content
+
+click|Add Resource
+verifyText|Add Resource
+verifyText|You may upload a new file
+uploadFile|test.pdf
+click|mm-add-item
+verifyText|test.pdf
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

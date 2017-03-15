@@ -1,0 +1,60 @@
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Schedule
+verifyText|Schedule
+verifyText|$instUser
+verifyText|Calendar by Week
+selectList|View|List of Events
+verifyValue|View|List of Events
+verifyText|List of Events
+verifyText|Custom date range
+selectList|customStartMonth|JUL
+selectList|customStartDay|1
+selectList|customStartYear|2014
+selectList|customEndMonth|SEP
+selectList|customEndDay|13
+selectList|customEndYear|2016
+verifyValue|customStartMonth|JUL
+verifyValue|customStartDay|1
+verifyValue|customStartYear|2014
+verifyValue|customEndMonth|SEP
+verifyValue|customEndDay|13
+verifyValue|customEndYear|2016
+
+click|Filter Events
+verifyText|Team Meeting
+
+click|Team Meeting
+verifyText|Team Meeting
+verifyText|DMC 3350
+
+click|Remove event
+verifyText|Deleting schedule item
+verifyText|Are you sure you want to remove this event?
+
+comment|Where does this take us?
+click|Remove event
+verifyText|Schedule
+verifyText|Printable Version
+verifyValue|view|List of Events
+verifyTextnotpresent|Team Meeting
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

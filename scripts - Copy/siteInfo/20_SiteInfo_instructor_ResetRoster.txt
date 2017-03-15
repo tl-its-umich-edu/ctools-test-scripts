@@ -1,0 +1,50 @@
+comment|The roster takes a minute or so to show up after it has been added.
+comment|So this script is included at the end of the test list to give some time
+comment| for the roster added in test #6 to show up.
+
+application|siteinfo
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Site Info
+verifyText|$site
+verifyText|Site contact and email
+verifyText|Site Description
+verifyText|Can read, revise, delete and add both content and participants to a site.
+
+comment|Edit Class Rosters
+click|Edit Class Roster(s)
+verifyText|Edit Roster Access for
+verifyText|$site
+
+selectCheckbox|Testing,101,001 (requested)
+click|Update
+verifyText|Edit Roster Access for
+verifyText|$site
+
+click|Cancel
+verifyText|$site
+verifyText|Site contact and email
+verifyText|Site Description
+verifyText|Can read, revise, delete and add both content and participants to a site.
+verifyTextNotPresent|Testing,101,001 (requested)
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

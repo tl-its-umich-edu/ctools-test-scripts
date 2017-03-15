@@ -1,5 +1,5 @@
-C:/ctools-test-scripts/scripts/worksiteCleanup/01_WorksiteCleanup_instructor_RemoveCourseSites.txt
-C:/ctools-test-scripts/scripts/worksiteCleanup/02_WorksiteCleanup_student_RemoveCourseSites.txt
+C:/ctools-test-scripts/scripts/worksiteCleanup/03_WorksiteCleanup_instructor_removeResources.txt 
+C:/ctools-test-scripts/scripts/worksiteCleanup/04_WorksiteCleanup_instructor_RemoveLBContent.txt                     
 
 C:/ctools-test-scripts/scripts/worksiteSetup/01_WorksiteSetup_instructor_VerifyCourseRosterDropdowns.txt               
 C:/ctools-test-scripts/scripts/worksiteSetup/02_WorksiteSetup_instructor_CreateCourseSite.txt                          
@@ -13,13 +13,13 @@ C:/ctools-test-scripts/scripts/worksiteSetup/11_WorksiteSetup_instructor_Duplica
 C:/ctools-test-scripts/scripts/worksiteSetup/12_WorksiteSetup_instructor_AddParticipantToDupeSite.txt                  
 C:/ctools-test-scripts/scripts/worksiteSetup/21_WorksiteSetup_student_CreateProjectSite.txt                            
 C:/ctools-test-scripts/scripts/worksiteSetup/22_WorksiteSetup_student_ReviseToolsProjectSite.txt                       
-C:/ctools-test-scripts/scripts/worksiteSetup/23_WorksiteSetup_student_AddParticipantProjectSite.txt                    
-C:/ctools-test-scripts/scripts/worksiteSetup/24_WorksiteSetup_student_ToolPickerInterface.txt                          
-C:/ctools-test-scripts/scripts/worksiteSetup/31_WorksiteSetup_student_DuplicateProjectSite.txt                         
-C:/ctools-test-scripts/scripts/worksiteSetup/32_WorksiteSetup_owner_AddParticipantToDupeProjectSite.txt                
 C:/ctools-test-scripts/scripts/worksiteSetup/41_WorksiteSetup_instructor_VerifySiteTypes.txt                           
 C:/ctools-test-scripts/scripts/worksiteSetup/51_WorksiteSetup_Student_CheckHelp.txt                                    
 C:/ctools-test-scripts/scripts/worksiteSetup/52_WorksiteSetup_Instructor_CheckHelp.txt  
+
+C:/ctools-test-scripts/scripts/preferences/01PreferencesInstructorChangeLanguage.txt
+C:/ctools-test-scripts/scripts/preferences/02PreferencesInstructorCustomizeVisibleTabs.txt
+C:/ctools-test-scripts/scripts/preferences/03PreferencesInstructorReviewNotifications.txt
 
 c:/ctools-test-scripts/scripts/assignments/01_assignments_InstructorCreate_LongAssignment.txt
 c:/ctools-test-scripts/scripts/assignments/02_assignments_InstructorCreate_DraftAssignment.txt
@@ -47,6 +47,7 @@ c:/ctools-test-scripts/scripts/chat/13_Chat_Instructor_DeleteChatMessage.txt
 c:/ctools-test-scripts/scripts/chat/15_Chat_Student_MoveToAnotherChatRoom.txt
 c:/ctools-test-scripts/scripts/chat/21_Chat_Student_CheckHelp.txt
 c:/ctools-test-scripts/scripts/chat/22_Chat_Instructor_CheckHelp.txt
+c:/ctools-test-scripts/scripts/chat/24_Chat_Instructor_DeleteChatRoom.txt
 
 c:/ctools-test-scripts/scripts/citations/01InstructorCreateCitationFolder.txt
 c:/ctools-test-scripts/scripts/citations/02InstructorCreateCitationList.txt
@@ -159,7 +160,6 @@ c:/ctools-test-scripts/scripts/lessonBuilder/21_LB_Student_Cannot_See_Hidden_Pag
 c:/ctools-test-scripts/scripts/lessonBuilder/22_LB_Instructor_View_Index_Of_Pages.txt
 
 
-
 c:/ctools-test-scripts/scripts/libraryHelp/01_LibraryHelp_Instructor_AccessLibraryHelp.txt
 c:/ctools-test-scripts/scripts/libraryHelp/02_LibraryHelp_Student_AccessLibraryHelp.txt
 c:/ctools-test-scripts/scripts/libraryHelp/04_LibraryHelp_Instructor_CheckHelp.txt
@@ -253,6 +253,7 @@ c:/ctools-test-scripts/scripts/resources/21ResourcesStudentCheckHiddenResource.t
 c:/ctools-test-scripts/scripts/resources/23ResourcesInstructorCreateMPrintFolder.txt
 c:/ctools-test-scripts/scripts/resources/24ResourcesInstructorMPrintUploadedFile.txt
 c:/ctools-test-scripts/scripts/resources/25ResourcesInstructorMPrintCToolsTextDoc.txt
+c:/ctools-test-scripts/scripts/resources/28ResourcesInstructorResetPermissions.txt
 
 c:/ctools-test-scripts/scripts/schedule/01_Schedule_Instructor_AddEvent.txt
 c:/ctools-test-scripts/scripts/schedule/02_Schedule_Instructor_EditEvent.txt

@@ -1,0 +1,39 @@
+comment|Add resource in drop box and check as student.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Drop Box
+verifyText|$studDisplayName
+verifyText|Drop Box
+
+click|Add
+
+click|Upload Files
+verifyText|Upload Files
+verifyText|Upload as many files as you like.
+verifyText|You can only upload 50 MB worth of files at one time.
+uploadFile|testfile_5MB
+
+click|Upload Files Now
+verifyText|testfile_5MB
+verifyText|5 MB
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

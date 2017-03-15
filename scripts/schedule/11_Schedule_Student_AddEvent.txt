@@ -6,7 +6,7 @@ verifyText|$kerberosLoginPageText
 enterText|login|$studUser
 enterText|password|$studPass
 
-click|doLogin
+click|loginSubmit
 verifyText|Assignments & Events
 verifyText|Recent Activity
 
@@ -30,15 +30,15 @@ comment|Duration defaults to 1 hour
 comment|End Time is automatically set based on duration. Check for this?
 
 enterText|Title|Student Team Meeting
-selectList|month|JUL
+selectList|month|APR
 selectList|day|11
-selectList|yearSelect|2011
+selectList|yearSelect|2016
 selectList|startHour|4
 selectList|startMinute|00
 selectList|startAmpm|PM
-verifyValue|month|JUL
+verifyValue|month|APR
 verifyValue|day|11
-verifyValue|yearSelect|2011
+verifyValue|yearSelect|2016
 verifyValue|startHour|4
 verifyValue|startMinute|00
 verifyValue|startAmpm|PM
@@ -58,7 +58,7 @@ verifyText|Student Team Meeting
 verifyText|Legend
 
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText

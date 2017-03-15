@@ -52,6 +52,9 @@
 			<generic>//input[@id=element and (@type='button' or @type='submit')]</generic>
 		</button>
 		<button>
+			<generic>//button[@id=element]</generic>
+		</button>
+		<button>
 			<generic>//input[@name=element and (@type='button' or @type='submit')]</generic>
 		</button>
 		<button>

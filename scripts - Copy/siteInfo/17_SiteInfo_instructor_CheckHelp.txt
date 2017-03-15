@@ -1,0 +1,35 @@
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+wait|1
+click|Site Info
+verifyText|Site Info
+verifyText|Roster(s) with site access
+verifyText|Site participants only
+verifyText|CTools default
+
+click|Help for Site Info
+waitForPopup|30
+verifyText|CTools Help Document
+verifyText|Search Help
+verifyText|Editing information about a site
+closePopUp|
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

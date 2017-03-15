@@ -10,7 +10,7 @@ comment|For some reason, this first link is not handled well by WebDriver.  An e
 comment|is necessary to reach this lick.
 wait|10
 click|ITS Teaching & Learning
-verifyText|Teaching & Learning Group
+verifyText|Teaching & Learning Resources
 
 comment|Go back to gateway
 openURL|$url

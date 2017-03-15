@@ -1,0 +1,147 @@
+application|worksitesetup
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|Worksite Setup
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+
+click|New
+verifyText|Site Type
+verifyText|Build your own site
+verifyText|Create site from template
+
+selectRadio|course site
+verifyText|Academic term
+selectList|Academic term:|$term
+verifyValue|Academic term:|$term
+
+comment|Create a course site for the current term.
+click|Continue
+
+click|Still cannot find your course/section?
+verifyText|Course/Section(s) Selection
+verifyText|Authorization to Allow Roster(s) Site Access
+
+enterText|id-Subject:1|$newSiteName
+enterText|id-Course:1|$creationCourseNum
+enterText|id-Section:1|001
+enterText|uniqname|$instUser
+
+click|Continue
+verifyText|Course Site Information
+verifyText|Enter basic information about the course site...
+verifyText|$term
+ckEnter|Description|A basic course created during automated testing.  This is a description.
+enterText|Short Description|An even shorter description
+verifyText|Site will display this theme
+click|Continue
+
+comment|Should be on the list of tools
+verifyText|Course Site Tools
+verifyText|Choose tools to include on your site...
+verifyText|Re-use Material from Other Sites You Own 
+selectCheckbox|Announcements
+click|Assessments
+selectCheckbox|Assignments
+click|Social Interactions
+selectCheckbox|Chat Room
+selectCheckbox|Drop Box
+selectCheckbox|Email Archive
+click|Site Management
+selectCheckbox|Engineering Honor Code
+selectCheckbox|Evaluate This Class
+selectCheckbox|Forums
+selectCheckbox|Gradebook
+comment|selectCheckbox|iTunes U
+selectCheckbox|Lesson Builder
+click|Library
+selectCheckbox|Library Help
+selectCheckbox|Library Materials
+selectCheckbox|Messages
+selectCheckbox|Modules
+selectCheckbox|News
+selectCheckbox|Polls
+selectCheckbox|Resources
+selectCheckbox|Schedule
+selectCheckbox|Syllabus
+selectCheckbox|Test Center
+selectCheckbox|Textbooks
+selectCheckbox|Web Content
+selectCheckbox|Wiki
+click|Plugin Tools
+selectCheckbox|Active Learning Platform
+verifyValue|No, thanks.|true
+
+click|Continue
+verifyText|Customize tool instances
+verifyText|Active Learning Platform
+verifyText|Lesson Builder
+verifyText|Email Archive
+verifyText|News
+verifyText|Web Content
+enterText|Site email address|$creationCourseEmail
+enterText|URL Channel|http://rss.cnn.com/rss/cnn_topstories.rss
+
+click|Continue
+verifyText|Course Site Access
+verifyText|Site Status
+verifyValue|Publish site|true
+verifyText|Display in public site list
+
+click|Continue
+verifyText|Confirm your site setup selections
+verifyText|Home
+verifyText|Announcements
+verifyText|Assignments
+verifyText|Chat Room
+verifyText|Drop Box
+verifyText|$creationCourseEmail
+verifyText|Engineering Honor Code
+verifyText|Evaluate This Class
+verifyText|Forums
+verifyText|Gradebook
+comment|verifyText|iTunes U
+verifyText|Lesson Builder
+verifyText|Library Help
+verifyText|Library Materials
+verifyText|Messages
+verifyText|Modules
+comment|verifyText|News ( http://rss.cnn.com/rss/cnn_topstories.rss ) 
+verifyText|Polls
+verifyText|Resources
+verifyText|Schedule
+verifyText|Site Info
+verifyText|Syllabus
+verifyText|Test Center
+verifyText|Textbooks
+verifyText|Web Content ( http:// )
+verifyText|Wiki
+verifyText|A basic course created during automated testing.
+verifyText|Active Learning Platform
+
+
+comment|This will create the site and bring you back to a list of sites.
+click|Request Site
+verifyText|Check box(es) to take action on a site. Click column title to sort.
+verifyText|$instUser
+verifyText|$site
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText
+
+comment|Give five minutes for the roster get applied to the site.
+wait|300

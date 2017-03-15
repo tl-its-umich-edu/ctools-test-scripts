@@ -1,0 +1,40 @@
+comment|Create draft announcements.
+application|announcements
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Announcements
+verifyText|Announcements
+verifyText|viewing announcements from the last 365 days
+
+click|Add
+verifyText|Post Announcement
+verifyText|Complete the form, then choose the appropriate button at the bottom.
+verifyText|Required items marked
+verifyText|Availability
+verifyValue|notify|None - No notification
+enterText|Announcement title|Draft Announcement
+ckEnter|Body|This is a Draft announcement
+
+click|Post Announcement
+verifyText|Draft Announcement
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

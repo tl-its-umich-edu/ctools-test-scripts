@@ -1,0 +1,41 @@
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Gradebook
+verifyText|Gradebook Items
+verifyText|Click a title to view complete details and to grade the item.
+verifyText|Sample Gradebook Item
+verifyText|128/132
+
+click|Course Grades
+verifyText|Course Grades
+verifyText|Total points
+verifyText|132
+verifyText|$studUser
+verifyText|A (96.96%)
+
+comment|Probably better as a manual test, the download process for this button will be different for each browser.
+comment|This does not work and will break.
+click|Export Course Grades as CSV
+wait|5
+verifyFile|course_grade-wildcard.csv
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText
+

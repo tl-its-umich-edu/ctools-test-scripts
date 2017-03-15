@@ -1,0 +1,67 @@
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Test Center
+verifyText|Assessments
+verifyText|No Assessments are defined
+
+click|Question Pools
+verifyText|Question Pools
+verifyText|Combine
+verifyText|Test Pool
+
+click|Test Pool
+verifyText|Edit Pool Properties
+verifyText|Point Value: 105.0
+
+comment|Verify First Question
+click|Choose the correct answer
+verifyText|Pool: Test Pool
+verifyText|Feedback
+verifyValue|mneme:MultipleChoice|true
+
+comment|Verify Second Question
+click|Next
+verifyText|Pool: Test Pool
+verifyText|Feedback
+verifyValue|mneme:TrueFalse|true
+
+comment|Verify Third Question
+click|Next
+verifyText|Pool: Test Pool
+verifyText|Feedback
+verifyValue|mneme:Essay|true
+
+comment|Verify Fourth Question
+click|Next
+verifyText|Pool: Test Pool
+verifyText|Feedback
+verifyValue|mneme:FillBlanks|true
+verifyValue|Case Sensitive|true
+selectCheckbox|Case Sensitive
+verifyValue|Case Sensitive|false
+
+click|Done
+verifyText|Question Pools
+verifyText|Test Pool
+verifyText|Difficulty Level: 2
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText
+

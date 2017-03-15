@@ -1,0 +1,57 @@
+application|lessonbuilder
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+comment|verifyText|A basic course created during automated testing
+
+click|Lesson Builder
+verifyText|LB Automated Test-Custom Content
+
+click|SubPage1
+verifyText|SubSubPage1
+
+click|Add Question
+verifyText|Edit Question Section
+verifyText|Question Text:
+verifyValue|multipleChoiceSelect|true
+enterText|question-text-input|Automated Test Question Text - What is your favorite color?
+enterText|question-multiplechoice-answer|Blue
+verifyValue|question-multiplechoice-answer-correct|false
+
+clickXPath|//*[@id="multipleChoiceDialogDiv"]/fieldset/button
+enterText|question-multiplechoice-answer2|Yellow
+selectCheckbox|question-multiplechoice-answer-correct2
+verifyValue|question-multiplechoice-answer-correct2|true
+
+enterText|question-correct-text|Right.  Off you go.
+enterText|question-incorrect-text|Auuuuuuuugh
+verifyValue|question-prerequisite|false
+verifyValue|question-required|false
+
+click|update-question
+verifyText|Automated Test Question Text - What is your favorite color?
+verifyValue|itemContainer::itemTable::item:1:multipleChoiceAnswer:0:multipleChoiceAnswerRadio|false
+verifyValue|itemContainer::itemTable::item:1:multipleChoiceAnswer:1:multipleChoiceAnswerRadio|false
+selectRadio|Yellow
+
+click|Answer!
+verifyText|Right. Off you go.
+
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

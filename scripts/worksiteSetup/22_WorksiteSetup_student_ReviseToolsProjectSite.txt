@@ -7,7 +7,7 @@ verifyText|$kerberosLoginPageText
 enterText|login|$studUser
 enterText|password|$studPass
 
-click|doLogin
+click|loginSubmit
 verifyText|Assignments & Events
 verifyText|Recent Activity
 
@@ -94,7 +94,7 @@ comment|verifyText|Organizer
 comment|verifyText|Can read, revise, delete, and add their own content to a site
 
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText

@@ -1,0 +1,37 @@
+application|lessonbuilder
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|A basic course created during automated testing
+
+click|Lesson Builder
+verifyText|LB Automated Test-Custom Content
+verifyText|SubPage1
+
+click|Index of pages
+verifyText|Lesson Builder
+verifyText|SubPage1
+verifyText|SubSubPage1
+
+click|SubPage1
+wait|3
+
+verifyText|This page is currently hidden from standard users.
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

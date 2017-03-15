@@ -1,0 +1,35 @@
+comment|Student unjoins the invisible site.
+application|membership
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|Membership
+verifyText|My Current Sites
+verifyText|Invisible Site
+selectCheckbox|Invisible Site
+verifyValue|Invisible Site|true
+
+click|Unjoin
+verifyText|Confirm Change
+verifyText|Are you sure you want to unjoin the following sites?
+verifyText|Invisible Site
+
+click|Unjoin
+verifyText|My Current Sites
+verifyText|You are no longer a participant in site Invisible Site
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

@@ -1,0 +1,47 @@
+application|signup
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$projDupeSite
+verifyText|Site Information Display
+
+click|Sign-up
+verifyText|Meetings
+verifyText|No future meetings have been created. Click 'Add' to create a new meeting.
+
+click|Add
+verifyText|Create New Meeting: Basic Information
+verifyText|To create a meeting, enter the required information and click Next. 
+
+enterText|Title:|Sample Project Appointment
+enterText|Location:|The Big House
+ckEnter|Description:|This is a sample appointment, used when testing the Sign-up tool.
+wait|5
+enterText|meeting:endTime.year|2019
+wait|5
+verifyValue|meeting:siteSelection|true
+
+click|Next
+verifyText|The meeting is scheduled across two different years.
+verifyText|This is a sample appointment, used when testing the Sign-up tool.
+
+click|Publish
+verifyText|Meetings
+verifyText|Click 'Add' to create a new meeting, or click a meeting title to modify or copy it.
+verifyText|Sample Project Appointment
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

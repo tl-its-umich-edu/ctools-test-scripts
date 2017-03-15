@@ -1,0 +1,41 @@
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$testDupeSite
+verifyText|Site Information Display
+verifyText|Course site that acts as a duplicate for sites that require stealth tools.
+
+click|Discussion
+verifyText|Add Topic
+verifyText|Add Category
+verifyText|Expand All
+verifyText|Permissions
+
+click|Add Topic
+verifyText|New Discussion Topic
+verifyText|Complete the form, then choose the appropriate button at the bottom.
+selectList|Category|Instructor Test Category
+verifyValue|Category|Instructor Test Category
+enterText|Topic Title|Instructor Test Topic
+verifyValue|Within this topic, allow replies to any message|true
+ckEnter|Message|This is a test topic message. This is sent to a new topic on an existing category
+
+click|Add Topic
+verifyText|Instructor Test Category
+verifyText|Instructor Test Topic
+verifyText|This is a test topic message. This is sent to a new topic on an existing category
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

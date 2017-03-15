@@ -1,0 +1,28 @@
+comment|Check created web content as a student where web link displayed as a new pop up.
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Google
+waitForPopup|30
+verifyText|Advertising
+verifyText|Privacy
+closePopUp|
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

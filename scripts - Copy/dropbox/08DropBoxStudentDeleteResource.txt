@@ -1,0 +1,42 @@
+comment|Delete resource in drop box and check as student.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Drop Box
+verifyText|$studDisplayName
+verifyText|Drop Box
+verifyText|testfile_5MB
+verifyText|5 MB
+
+selectCheckbox|selectedMembers
+verifyValue|selectedMembers|true
+
+
+click|Remove
+verifyText|Are you sure you want to remove the following item(s)?
+verifyText|Remove confirmation... 
+verifyText|testfile_5MB
+verifyText|5 MB
+
+click|Remove
+verifyTextNotPresent|testfile_5MB
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

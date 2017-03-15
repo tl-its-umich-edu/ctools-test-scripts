@@ -8,7 +8,7 @@ verifyText|$kerberosLoginPageText
 enterText|login|$instUser
 enterText|password|$instPass
 
-click|doLogin
+click|loginSubmit
 verifyText|Assignments & Events
 verifyText|Recent Activity
 
@@ -66,7 +66,7 @@ verifyText|$instDisplayName
 verifyText|folder group 2
 
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText

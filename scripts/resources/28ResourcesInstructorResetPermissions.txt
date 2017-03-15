@@ -1,0 +1,42 @@
+comment|Modify Permissions as instructor.
+
+openURL|$url
+verifyText|$gatewayText
+
+click|ctoolsLogin
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|loginSubmit
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Resources
+verifyText|$instDisplayName
+verifyText|Resources
+verifyText|Permissions
+
+click|Permissions
+verifyText|Permissions
+verifyText|Set permissions for resources in worksite
+verifyText|Assistant
+verifyValue|Studentcontent.new|true
+
+selectCheckbox|Studentcontent.new
+verifyValue|Studentcontent.new|false
+selectCheckbox|Studentcontent.revise.own
+verifyValue|Studentcontent.revise.own|false
+selectCheckbox|Studentcontent.delete.own
+verifyValue|Studentcontent.delete.own|false
+click|Save
+
+click|Logout
+verifyText|Are you sure you want to log out?
+
+click|logout
+verifyText|$logoutText

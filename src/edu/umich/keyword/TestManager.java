@@ -10,6 +10,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 //import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Properties;
 import java.util.List;
 import java.util.Scanner;
@@ -23,17 +24,20 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import com.beust.jcommander.internal.Lists;
+
 import org.apache.commons.io.FileUtils;
-import org.testng.collections.Lists;
+//import org.testng.collections.Lists;
 
 
 public class TestManager {
 	
 	private static WebDriver driver;
 	private static String application, browser, chromeExecutable, fileDirectory, downloadDirectory, logDirectory,
-		mimeTypes, OS, testListFile, variablesPath, xpathFile;
+		mimeTypes, OS, testListFile, variablesPath, xpathFile, geckoExecutable;
 	private static Integer timeout, minTimeout;
 	private static Boolean timingData;
 
@@ -57,7 +61,7 @@ public class TestManager {
 
 		// These variables will hold each line from the input directory.
 		// and hold the placement of the log directory
-		String testName, testScript, testResult;
+		String testName, testScript, testResult, driverExecutable;
 		String[] testScriptPath; 
 		
 		// These variables will hold the overall stats.
@@ -100,10 +104,16 @@ public class TestManager {
 			reportLogPointer.write("Error: there are no scripts in your script path.");
 			reportLogPointer.close();
 			return;
-		}		
-
+		}
+		
+		if (browser.equals("chrome")) {
+			driverExecutable = chromeExecutable;
+		} else {
+			driverExecutable = geckoExecutable;
+		}
+		
 		// Start the browser with the proper parameters.
-		driver = startDriver(browser, downloadDirectory, mimeTypes, chromeExecutable);		
+		driver = startDriver(browser, downloadDirectory, mimeTypes, driverExecutable);		
 		
 		// Run each test file in the input directory. 
 		for (int a = 0; a < numTests; a++) {
@@ -129,15 +139,24 @@ public class TestManager {
 			
 			if (testResult.equals("pass")) {
 				passedTests++;
+				
+				// 2/2017 (ckretler) Recent weblogin changes mean that logging out isn't
+				// entirely effective.  So, we must close the browser and restart after 
+				// every test.
+				//driver.quit();
+				driver.close();
+				// Start the browser with the proper parameters.
+				driver = startDriver(browser, downloadDirectory, mimeTypes, driverExecutable);
+				
 			} else {
 				// If the test fails, it will frequently leave the browser in an unknown state.
 				// So, shutdown the browser and restart in addition to incrementing the failed
 				// tests counter.
 				failedTests++;
 				
-				driver.quit();
+				driver.close();
 				// Start the browser with the proper parameters.
-				driver = startDriver(browser, downloadDirectory, mimeTypes, chromeExecutable);				
+				driver = startDriver(browser, downloadDirectory, mimeTypes, driverExecutable);				
 			}
 			
 			// Write test results out to our master log file.
@@ -205,6 +224,7 @@ public class TestManager {
 		//Read our properties values, with default values.
 		browser = propReader.getProperty("browser", "firefox");
 		chromeExecutable = propReader.getProperty("chromeExecutable", "none");
+		geckoExecutable = propReader.getProperty("geckoExecutable", "none"); 
 		fileDirectory = propReader.getProperty("fileDirectory");
 		downloadDirectory = propReader.getProperty("downloadDirectory");
 		logDirectory = propReader.getProperty("logDirectory");
@@ -286,14 +306,14 @@ public class TestManager {
 	}	
 	
 	
-	private static WebDriver startDriver(String browser, String downloadDirectory, String mimeTypes, String chromeExecutable) throws Exception {
+	private static WebDriver startDriver(String browser, String downloadDirectory, String mimeTypes, String driverExecutable) throws Exception {
 		
 			if (browser.contains("firefox")){
-				prepFirefoxProfile(downloadDirectory, mimeTypes);
+				prepFirefoxProfile(downloadDirectory, mimeTypes, driverExecutable);
 			} else if (browser.contains("explore")){
 				prepIEProfile(downloadDirectory, mimeTypes);
 			} else if (browser.contains("chrome")){
-				prepChromeProfile(downloadDirectory, mimeTypes, chromeExecutable);
+				prepChromeProfile(downloadDirectory, mimeTypes, driverExecutable);
 			} else throw new Exception("You have entered an invalid browser string.  Must be either firefox, explorer or chrome.");
 			
 			return driver;
@@ -626,8 +646,9 @@ public class TestManager {
 		}		
 	}
 	
-	private static void prepFirefoxProfile (String downloadDirectory, String mimeTypes)  throws Exception {
+	private static void prepFirefoxProfile (String downloadDirectory, String mimeTypes, String driverPath)  throws Exception {
 		
+		System.setProperty("webdriver.gecko.driver", driverPath);
 		FirefoxProfile profile = new FirefoxProfile(); 
 		
 		// This section tells firefox to download all files of the user specified
@@ -651,20 +672,23 @@ public class TestManager {
 				
 		System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, driverPath);
 		
-		ChromeDriverService service = ChromeDriverService.createDefaultService();
+		//ChromeDriverService service = ChromeDriverService.createDefaultService();
 		
 		ChromeOptions options = new ChromeOptions();
 
 		// The following option is ineffectual.  Workaround is to set the downloadDirectory
 		// equal to the user's current download directory setting
-		//options.addArguments("--download.default_directory=" + downloadDirectory);
-		//options.addArguments("--download.prompt_for_download=false");
-		//options.addArguments("--plugins.plugins_disabled=Chrome PDF Viewer");
-		//options.addArguments("--plugins.plugins_disabled=C:/Program Files (x86)/Adobe/Reader 10.0/Reader/Browser/nppdf32.dll");
-		//options.addArguments("--plugins.plugins_disabled=C:/Program Files (x86)/Google/Chrome/Application/19.0.1084.52/pdf.dll");		
-		//options.addArguments("plugins_disabled=C:/Program Files (x86)/Google/Chrome/Application/19.0.1084.52/pdf.dll");		
+		HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+		chromePrefs.put("profile.default_content_settings.popups", 0);
+		chromePrefs.put("download.default_directory", downloadDirectory);
+		options.setExperimentalOption("prefs", chromePrefs);
+		DesiredCapabilities cap = DesiredCapabilities.chrome();
+		cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+		cap.setCapability(ChromeOptions.CAPABILITY, options);
+		//WebDriver driver = new ChromeDriver(cap);
 		
-		driver = new ChromeDriver(service, options);
+		//driver = new ChromeDriver(service, options);
+		driver = new ChromeDriver(cap);
 		}
 	
 	private static void prepIEProfile (String downloadDirectory, String mimeTypes)  throws Exception {

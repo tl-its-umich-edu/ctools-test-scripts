@@ -1,0 +1,44 @@
+comment|Check info as instructor.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Wiki
+verifyText|$instDisplayName
+verifyText|Wiki
+verifyText|Home
+
+click|Info
+verifyText|Info:
+verifyText|Home
+verifyText|Affiliate
+verifyText|Additional Page Permissions
+verifyText|In addition to editing the page permissions you may edit site permissions
+verifyText|Feeds
+verifyValue|groupReadId|true
+verifyValue|groupWriteId|true
+verifyValue|groupAdminId|true
+verifyValue|ownerReadId|true
+verifyValue|ownerWriteId|true
+verifyValue|ownerAdminId|true
+verifyValue|publicReadId|false
+verifyValue|publicWriteId|false
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

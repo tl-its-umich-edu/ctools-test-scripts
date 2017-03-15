@@ -60,7 +60,8 @@ public class FileDownloader {
             throw new Exception(Ex.getCause());
         } finally {
             getRequest.abort();
-        }       
+        }  
+           
         return result;
     }
 

@@ -8,7 +8,7 @@ verifyText|$kerberosLoginPageText
 enterText|login|$instUser
 enterText|password|$instPass
 
-click|doLogin
+click|loginSubmit
 verifyText|Assignments & Events
 verifyText|Recent Activity
 
@@ -21,11 +21,9 @@ verifyText|LB Automated Test-Custom Content
 
 click|Add Assignment
 verifyText|Pick an Assignment
-verifyText|There are no assignments available in this site.
 
 click|Create new assignment using Assignments
 verifyText|Continue with Add Assignment, after you have created the new assignment
-verifyText|There are currently no assignments at this location.
 
 application|generic
 click|Add
@@ -58,9 +56,6 @@ UploadFile|FakeAssignment.doc
 verifyText|FakeAssignment.doc
 click|Continue
 
-
-
-
 click|Post
 verifyText|Assignment List
 verifyText|LB Long Assignment
@@ -74,9 +69,8 @@ verifyText|LB Long Assignment
 verifyTextNotPresent|There are no assignments available in this site.
 
 
-
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText

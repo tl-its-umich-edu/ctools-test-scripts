@@ -1,0 +1,30 @@
+comment|Check help text as instructor.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$project_site
+verifyText|There are currently no announcements at this location.
+verifyText|Recent Chat Messages
+
+click|Help
+waitForPopup|30
+verifyText|USING THE TOOLS - Integrated UM and External Tools
+verifyText|Search Help
+verifyText|$helpText
+closePopUp|
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

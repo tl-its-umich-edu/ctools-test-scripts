@@ -1,0 +1,63 @@
+application|polls
+comment|Take Poll as a student
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Polls
+verifyText|Poll list
+verifyText|What is your favorite color?
+verifyText|$studUser
+
+click|What is your favorite color?
+verifyText|Choose your favorite color from the list below.
+verifyText|What is your favorite color?
+verifyValue|Red|false
+verifyValue|Blue|false
+verifyValue|Green|false
+selectCheckbox|Red
+verifyValue|Red|true
+selectCheckbox|Green
+verifyValue|Green|true
+
+click|Vote!
+verifyText|Thank you for voting!
+verifyText|Your reference number:
+
+click|Back
+verifyText|Poll list
+verifyText|What is your favorite color?
+verifyText|$studUser
+
+click|Results|1
+verifyText|Results
+verifyText|What is your favorite color?
+verifyText|$studUser
+verifyText|Blue
+comment|verifyText|50%
+verifyText|100%
+
+click|Back
+verifyText|Poll list
+verifyText|What is your favorite color?
+verifyText|$studUser
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText
+

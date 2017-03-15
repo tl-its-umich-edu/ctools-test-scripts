@@ -1,0 +1,69 @@
+comment|To import and verify settings and questions of an assessment
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$testDupeSite
+verifyText|Tests & Quizzes
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Tests & Quizzes
+verifyText|Assessments
+verifyText|Create an Assessment
+verifyText|Import from File (XML or zip) 
+
+click|Import
+verifyText|Import Assessment
+verifyText|Choose an IMS QTI-compliant
+
+uploadFile|ImportAssessment.zip
+verifyText|Import Assessment
+verifyValue|importAssessmentForm:sourceType|true
+
+click|Import
+verifyText|Create an Assessment
+verifyText|Import from File
+selectList|authorIndexForm:coreAssessments:0:pendingSelectAction1|Edit
+comment|should be able to view the questions in the imported assessment
+verifyText|Questions: Import Assessment
+verifyText|Default - 3 questions
+verifyText|Is this question true or false?
+verifyText|Answer Key: False
+verifyText|Answer this sample essay question
+verifyText|test.doc
+verifyText|This is an Assessment to be imported
+
+click|Settings
+verifyText|Settings - Import Assessment
+click|Open All Menus
+
+comment|Not to verify settings of imported assessment
+verifyText|$instDisplayName
+verifyValue|Each Question is on a separate Web page|true
+verifyValue|Each Part is on a separate Web page|false
+verifyValue|Continuous numbering between parts|true
+verifyValue|Only|true
+verifyValue|Late submissions WILL NOT be accepted after the due date|true
+verifyValue|Feedback on submission|true
+verifyValue|assessmentSettingsAction:feedbackCheckbox5|true
+verifyValue|assessmentSettingsAction:feedbackCheckbox6|true
+verifyValue|Anonymous grading only|true
+
+click|Reset
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText
+

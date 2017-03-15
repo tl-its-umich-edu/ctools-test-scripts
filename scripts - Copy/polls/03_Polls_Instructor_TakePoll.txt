@@ -1,0 +1,41 @@
+application|polls
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Polls
+verifyText|$instDisplayName
+verifyText|Poll list
+verifyText|What is your favorite color
+
+click|What is your favorite color?
+verifyText|Vote
+verifyText|Polls
+verifyText|What is your favorite color
+verifyValue|Blue|false
+selectCheckbox|Blue
+verifyValue|Blue|true
+
+click|Vote!
+verifyText|Polls
+verifyText|Thank you for voting
+verifyText|Your reference number
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

@@ -7,7 +7,7 @@ verifyText|$kerberosLoginPageText
 enterText|login|$instUser
 enterText|password|$instPass
 
-click|doLogin
+click|loginSubmit
 verifyText|Assignments & Events
 verifyText|Recent Activity
 
@@ -46,7 +46,7 @@ verifyText|Baldwin,S.A.;Fugaccia,I.;Brown,D.R.;Brown,L.V.; and Scheff,S.W. J.Neu
 
 
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText

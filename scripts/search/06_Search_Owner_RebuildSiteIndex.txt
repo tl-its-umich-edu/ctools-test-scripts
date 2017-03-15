@@ -28,7 +28,7 @@ verifyText|Index contains
 verifyText|Pending
 
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText

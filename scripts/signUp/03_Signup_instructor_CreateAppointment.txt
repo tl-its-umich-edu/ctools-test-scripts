@@ -8,7 +8,7 @@ verifyText|$kerberosLoginPageText
 enterText|login|$instUser
 enterText|password|$instPass
 
-click|doLogin
+click|loginSubmit
 verifyText|Assignments & Events
 verifyText|Recent Activity
 
@@ -26,9 +26,10 @@ verifyText|To create a meeting, enter the required information and click Next.
 enterText|Title:|Sample Course Appointment
 enterText|Location:|The Diag
 ckEnter|Description:|This is a sample appointment, used when testing the Sign-up tool.
-comment|wait|3
+wait|5
 
 enterText|meeting:endTime.year|2018
+wait|5
 verifyValue|meeting:endTime.year|2018
 verifyValue|meeting:siteSelection|true
 
@@ -42,7 +43,7 @@ verifyText|Click 'Add' to create a new meeting, or click a meeting title to modi
 verifyText|Sample Course Appointment
 
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText

@@ -1,0 +1,32 @@
+comment|Check help text as student
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Library Materials
+verifyText|No Library Materials Located
+
+click|No Library Materials Located
+waitForPopup|30
+verifyText|CTools Reserves Trouble Report
+verifyText|CTools is not locating any library reserves for this course.
+closePopUp|
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

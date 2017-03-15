@@ -9,20 +9,12 @@ comment|and return back there at the end of the test case.
 comment|don't need to test this, it has its own test plan.
 verifyText|Students - See All of Your Courses
 
-click|Pilot Instructor Information
-comment|waitForPopup|30
+click|Canvas U-M Site
+waitForPopup|30
 verifyText|Canvas at Michigan
-click|Back
+closePopup|
 
-click|About the Pilot
-comment|waitForPopup|30
-verifyText|Unit Contacts
-click|Back
-
-click|Student Help Guides
-comment|waitForPopup|30
-verifyText|Canvas Guide for LMS Pilot Students
-click|Back
-
-click|Canvas Workshops
-verifyText|Session Listing
+click|Canvas Quick-Start Tutorial
+waitForPopup|30
+verifyText|Quick-Start Tutorial for U-M Instructors
+closePopup|

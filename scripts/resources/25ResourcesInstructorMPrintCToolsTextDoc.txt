@@ -8,7 +8,7 @@ verifyText|$kerberosLoginPageText
 enterText|login|$instUser
 enterText|password|$instPass
 
-click|doLogin
+click|loginSubmit
 verifyText|Assignments & Events
 verifyText|Recent Activity
 
@@ -38,20 +38,21 @@ verifyText|MPrint_Text_Document
 
 click|Actions|2
 wait|1
-comment|verifyText|Print File
-
 click|Print File
-comment|waitForPopUp|30
 
-comment|verifyText|Select a Document
-comment|verifyText|Locker
+verifyText|The specified file could not be uploaded. 
+verifyText|The specified document already exists and could not be overwritten.
+
+selectCheckbox|selectall
+click|Remove
+verifyText|Are you sure you want to remove
 verifyText|MPrint_Text_Document
 
-closePopUp
-verifyText|The specified file could not be uploaded. The specified document already exists and could not be overwritten.
+click|Remove
+verifyTextNotPresent|MPrint_Text_Document
 
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText

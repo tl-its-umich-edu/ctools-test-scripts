@@ -1,0 +1,30 @@
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Library Help
+verifyText|Service hours
+comment|verifyText|Ask a Librarian
+verifyText|University Library's instant messaging service is not available
+
+comment|click|Ask a Librarian
+comment|verifyText|Using the Library
+comment|verifyText|Ask a Librarian is tailored to the research needs of UM students
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

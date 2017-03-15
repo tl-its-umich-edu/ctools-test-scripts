@@ -7,7 +7,7 @@ verifyText|$kerberosLoginPageText
 enterText|login|$studUser
 enterText|password|$studPass
 
-click|doLogin
+click|loginSubmit
 verifyText|Assignments & Events
 verifyText|Recent Activity
 
@@ -17,15 +17,15 @@ verifyText|Check box(es) to take action on a site.
 
 selectCheckbox|$project_site
 click|Edit
-verifyText|A basic project site created during automated testing.
+comment|verifyText|A basic project site created during automated testing.
 verifyText|$project_site
 verifyText|$studUser
 verifyText|Organizer
 verifyText|Can read, revise, delete, and add their own content to a site
 
 comment|Add the selenium student to the course.
+
 click|Add Participants
-verifyText|Add Participants
 verifyText|Enter multiples each on separate line
 verifyValue|Assign all participants to the same role|true
 enterText|Official Email Address or Username|$instUser
@@ -56,7 +56,7 @@ verifyText|Organizer
 verifyText|Can read, revise, delete, and add their own content to a site
 
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText

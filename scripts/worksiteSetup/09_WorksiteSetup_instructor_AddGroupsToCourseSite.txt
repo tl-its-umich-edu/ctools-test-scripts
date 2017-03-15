@@ -7,7 +7,7 @@ verifyText|$kerberosLoginPageText
 enterText|login|$instUser
 enterText|password|$instPass
 
-click|doLogin
+click|loginSubmit
 verifyText|Assignments & Events
 verifyText|Recent Activity
 
@@ -19,49 +19,13 @@ selectCheckbox|$site
 click|Edit
 verifyText|$site
 verifyText|$instUser
-verifyText|A basic course created during automated testing.
+comment|verifyText|A basic course created during automated testing.
 verifyText|Can read, add, and revise content on sites in a particular department
 
-click|Manage Groups
-verifyText|Group List
-verifyText|There are no groups defined
-
-click|Create New Group
-verifyText|Create New Group
-verifyText|Select members of the site member list
-enterText|Title|Group 1
-enterText|Description|This is a test group named Group 1
-
-selectList|siteMembers-selection|Instructor, Selenium ($instUser)
-click|right
-selectList|siteMembers-selection|$studLastFirstID
-click|right
-selectList|siteMembers-selection|StudB, QA (qastudb)
-click|right
-
-click|Add
-verifyText|Group List
-verifyText|Group 1
-
-click|Create New Group
-verifyText|Create New Group
-verifyText|Select members of the site member list
-enterText|Title|Group 2
-enterText|Description|This is a test group named Group 2
-
-selectList|siteMembers-selection|Instructor, Selenium ($instUser)
-click|right
-selectList|siteMembers-selection|Studc, QA (qastudc)
-click|right
-selectList|siteMembers-selection|StudB, QA (qastudb)
-click|right
-
-click|Add
-verifyText|Group List
-verifyText|Group 2
+verifyTextNotPresent|Manage Groups
 
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText

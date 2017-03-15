@@ -1,0 +1,41 @@
+comment|Add resource with email notification as instructor.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Resources
+verifyText|$instDisplayName
+verifyText|Resources
+
+click|Add
+
+click|Upload Files
+verifyText|Upload Files
+verifyText|Upload as many files as you like.
+verifyText|You can only upload 50 MB worth of files at one time
+uploadFile|FakeAssignment.doc
+selectList|Email Notification|High - All participants
+verifyValue|Email Notification|High - All participants
+
+click|Upload Files Now
+verifyText|Resources
+verifyText|FakeAssignment.doc
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

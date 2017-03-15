@@ -1,0 +1,34 @@
+comment|Check help text as instructor.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Modules
+verifyText|Authoring options...
+
+click|Add Module
+verifyText|Define Properties
+enterText|AddModuleForm:title|Test Module
+
+click|Add
+verifyText|Test Module
+verifyText|Authoring options...
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

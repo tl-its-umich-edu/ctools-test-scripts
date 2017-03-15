@@ -6,7 +6,7 @@ verifyText|$kerberosLoginPageText
 enterText|login|$studUser
 enterText|password|$studPass
 
-click|doLogin
+click|loginSubmit
 verifyText|Assignments & Events
 verifyText|Recent Activity
 
@@ -25,16 +25,16 @@ verifyText|Custom date range
 
 selectList|customStartMonth|JUL
 selectList|customStartDay|1
-selectList|customStartYear|2011
+selectList|customStartYear|2014
 selectList|customEndMonth|SEP
 selectList|customEndDay|16
-selectList|customEndYear|2014
+selectList|customEndYear|2016
 verifyValue|customStartMonth|JUL
 verifyValue|customStartDay|1
-verifyValue|customStartYear|2011
+verifyValue|customStartYear|2014
 verifyValue|customEndMonth|SEP
 verifyValue|customEndDay|16
-verifyValue|customEndYear|2014
+verifyValue|customEndYear|2016
 
 click|Filter Events
 verifyText|Academic Calendar
@@ -55,7 +55,7 @@ verifyValue|timeFilterOption|Custom date range
 verifyTextNotPresent|Student Team Meeting
 
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText

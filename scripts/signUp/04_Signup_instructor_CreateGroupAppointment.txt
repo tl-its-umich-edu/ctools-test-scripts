@@ -8,7 +8,7 @@ verifyText|$kerberosLoginPageText
 enterText|login|$instUser
 enterText|password|$instPass
 
-click|doLogin
+click|loginSubmit
 verifyText|Assignments & Events
 verifyText|Recent Activity
 
@@ -26,8 +26,8 @@ enterText|Title:|Sample Course Group Appointment
 selectList|meeting:selectedLocation|The Diag
 ckEnter|Description:|This is a sample appointment, used when testing the Sign-up tool.  This will be assigned to a group, if one exists.
 wait|1
-enterText|meeting:endTime.year|2016
-verifyValue|meeting:endTime.year|2016
+enterText|meeting:endTime.year|2018
+verifyValue|meeting:endTime.year|2018
 verifyValue|meeting:siteSelection|true
 selectCheckbox|meeting:siteSelection
 selectCheckbox|meeting:currentSiteGroups:0:groupSelection
@@ -44,7 +44,7 @@ verifyText|Click 'Add' to create a new meeting, or click a meeting title to modi
 verifyText|Sample Course Group Appointment
 
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText

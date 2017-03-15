@@ -9,7 +9,7 @@ verifyText|$kerberosLoginPageText
 enterText|login|qastudc
 enterText|password|rubleitoonoicH?
 
-click|doLogin
+click|loginSubmit
 verifyText|Assignments & Events
 verifyText|Recent Activity
 
@@ -31,8 +31,8 @@ verifyText|Group 2
 verifyText|This is a test announcement for Group 2
 
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText
 

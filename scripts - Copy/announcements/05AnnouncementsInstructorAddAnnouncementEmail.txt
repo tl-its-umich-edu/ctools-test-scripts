@@ -1,0 +1,49 @@
+comment|Create an announcement with email notification.
+application|announcements
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Announcements
+verifyText|Announcements
+verifyText|viewing announcements from the last 365 days
+
+click|Add
+verifyText|Post Announcement
+verifyText|Complete the form, then choose the appropriate button at the bottom.
+verifyText|Required items marked
+enterText|subject|Test Announcement with Email
+ckEnter|Body|This is a test announcement with an email notification.
+selectList|notify|High - All participants
+
+click|Post Announcement
+verifyText|Announcements (viewing announcements from the last 365 days)
+verifyText|Test Announcement with Email
+
+click|Edit
+verifyText|Edit Announcement
+
+click|See revision history
+verifyText|High priority
+
+click|Cancel
+verifyText|Announcements (viewing announcements from the last 365 days)
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

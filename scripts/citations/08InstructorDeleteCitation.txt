@@ -7,7 +7,7 @@ verifyText|$kerberosLoginPageText
 enterText|login|$instUser
 enterText|password|$instPass
 
-click|doLogin
+click|loginSubmit
 verifyText|Assignments & Events
 verifyText|Recent Activity
 
@@ -31,7 +31,7 @@ verifyText|Automated Test Citations
 
 
 click|remove
-wait|1
+wait|10
 verifyTextNotPresent|Functional Test Automation with Selenium
 
 selectCheckbox|selected
@@ -42,7 +42,7 @@ verifyText|No citations have been added yet.
 
 
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText

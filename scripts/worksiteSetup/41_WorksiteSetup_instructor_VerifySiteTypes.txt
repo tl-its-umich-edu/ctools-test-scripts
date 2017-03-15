@@ -8,7 +8,7 @@ verifyText|$kerberosLoginPageText
 enterText|login|$instUser
 enterText|password|$instPass
 
-click|doLogin
+click|loginSubmit
 verifyText|Assignments & Events
 verifyText|Recent Activity
 
@@ -16,23 +16,10 @@ click|Worksite Setup
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
 
-click|New
-verifyText|Site Type
-verifyText|Build your own site
-
-verifyText|course site
-verifyText|project site
-verifyTextNotPresent|portfolio site
-verifyText|Create site from template
-
-comment|Verify clicking on course site will yield the academic term drop-down
-selectRadio|course site
-verifyText|Academic term
-selectList|Academic term:|$term
-verifyValue|Academic term:|$term
+verifyText|Site creation is disabled.
 
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText

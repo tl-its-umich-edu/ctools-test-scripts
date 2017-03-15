@@ -1,0 +1,35 @@
+comment|Check help text as instructor.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Wiki
+verifyText|$instDisplayName
+verifyText|Wiki
+verifyText|Home
+
+click|Help for Wiki
+waitForPopUp|30
+verifyText|Wiki
+verifyText|Search Help
+verifyText|A Wiki is a kind of collaborative website in which multiple users can add and change the content.
+closePopUp|
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

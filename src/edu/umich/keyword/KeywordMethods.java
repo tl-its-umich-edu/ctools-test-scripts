@@ -373,10 +373,15 @@ public class KeywordMethods {
 			// This clears all text from the existing field before typing the
 			// new...
 			String os = System.getProperty("os.name");
-			if (os.equals("Windows 7")){objectInQuestion.sendKeys(Keys.chord(Keys.CONTROL, "a"),
-					textToEnter);
-			}else{objectInQuestion.clear();
-					objectInQuestion.sendKeys(Keys.chord(Keys.COMMAND, "a"), textToEnter);
+			//if (os.equals("Windows Server")){objectInQuestion.sendKeys(Keys.chord(Keys.CONTROL, "a"),
+			if (os.startsWith("Windows")){
+				objectInQuestion.sendKeys(Keys.chord(Keys.CONTROL, "a"), textToEnter);
+				//2/13/2017 (ckretler): geckoDriver (firefox) has trouble with the complex
+				//sendKeys command provided above.  Needed to simplify as exemplified below:
+				//objectInQuestion.sendKeys(textToEnter);
+			} else {
+				objectInQuestion.clear();
+				objectInQuestion.sendKeys(Keys.chord(Keys.COMMAND, "a"), textToEnter);
 			}
 			
 		
@@ -439,7 +444,7 @@ public class KeywordMethods {
 			driver.switchTo().frame(fckFrame);
 
 			String os = System.getProperty("os.name");
-			if (os.equals("Windows 7")){driver.findElement(By.xpath("//body")).sendKeys(
+			if (os.startsWith("Windows")){driver.findElement(By.xpath("//body")).sendKeys(
 					Keys.chord(Keys.CONTROL, "a"), textToEnter);
 			}else{driver.findElement(By.xpath("//body")).clear();
 			driver.findElement(By.xpath("//body")).sendKeys(textToEnter);

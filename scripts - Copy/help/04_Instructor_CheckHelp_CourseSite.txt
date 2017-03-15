@@ -1,0 +1,30 @@
+comment|Check help text as instructor.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Recent Chat Messages
+verifyText|Recent Announcements
+
+click|Help
+waitForPopup|30
+comment|verifyText|Click a topic...
+verifyText|Search Help
+verifyText|$helpText
+closePopUp|
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

@@ -6,7 +6,7 @@ verifyText|$kerberosLoginPageText
 enterText|login|$instUser
 enterText|password|$instPass
 
-click|doLogin
+click|loginSubmit
 verifyText|Assignments & Events
 verifyText|Recent Activity
 
@@ -25,22 +25,22 @@ verifyText|Gradebook Item Summary
 verifyText|Sample Gradebook Item
 verifyText|Remove gradebook item from gradebook
 verifyText|$studUser
-verifyValue|gbForm:gradingTable:1:Score|128
+verifyValue|gbForm:gradingTable:0:Score|128
 
 comment|Change the students score to 132, the maximum for this item.
 comment|Then verify that your changes have taken place.
-enterText|gbForm:gradingTable:1:Score|132
+enterText|gbForm:gradingTable:0:Score|132
 
 click|Save Changes
 verifyText|New scores saved.
 verifyText|Gradebook Item Summary
 verifyText|Sample Gradebook Item
 verifyText|Remove gradebook item from gradebook
-verifyValue|gbForm:gradingTable:1:Score|132
+verifyValue|gbForm:gradingTable:0:Score|132
 
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText
 

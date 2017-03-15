@@ -1,0 +1,44 @@
+comment|Modify Permissions as instructor.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Announcements
+verifyText|Announcements
+verifyText|viewing announcements from the last 365 days
+
+click|Permissions
+verifyText|Permissions
+verifyText|Set permissions for Announcements in worksite
+verifyText|Student
+verifyValue|Studentannc.new|false
+
+selectCheckbox|Studentannc.new
+selectCheckbox|Studentannc.delete.any
+selectCheckbox|Studentannc.delete.own
+selectCheckbox|Studentannc.revise.any
+selectCheckbox|Studentannc.revise.own
+selectCheckbox|Studentannc.all.groups
+selectCheckbox|Studentannc.read.drafts
+click|Save
+
+comment|wait|300
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

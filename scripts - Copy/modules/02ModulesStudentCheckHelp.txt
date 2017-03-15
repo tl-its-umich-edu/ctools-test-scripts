@@ -1,0 +1,35 @@
+comment|Check help text as instructor.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$studUser
+enterText|password|$studPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Modules
+verifyText|$studDisplayName
+verifyText|No modules are available for the course at this time
+
+
+click|Help for Modules
+waitForPopup|30
+verifyText|Modules
+verifyText|Search Help
+verifyText|Modules is a lesson builder tool 
+closePopUp|
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

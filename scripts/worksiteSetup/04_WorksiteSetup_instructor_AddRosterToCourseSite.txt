@@ -8,7 +8,7 @@ verifyText|$kerberosLoginPageText
 enterText|login|$instUser
 enterText|password|$instPass
 
-click|doLogin
+click|loginSubmit
 verifyText|Assignments & Events
 verifyText|Recent Activity
 
@@ -20,54 +20,14 @@ selectCheckbox|$site
 click|Edit
 verifyText|$site
 verifyText|$instUser
-verifyText|A basic course created during automated testing.
+
+comment|verifyText|A basic course created during automated testing.
+
 verifyText|Can read, add, and revise content on sites in a particular department
-
-click|Edit Class Roster(s)
-verifyText|Edit Roster Access for
-verifyText|$providerID1
-verifyText|requested
-
-comment|So far we have just seen the result of course creation, now we will add a new roster
-click|Add Roster(s)
-verifyText|Editing Course/Section Information for
-verifyValue|Academic term:|$term
-
-click|Add course(s) and/or section(s) not listed above...
-verifyText|Course/Section(s) Selection
-verifyText|You have indicated the following class(es) to add to this site:
-
-click|Still cannot find your course/section?
-verifyText|Editing site...
-verifyText|$providerID1
-verifyText|At this time we cannot verify you are the instructor of record
-
-comment|Specific to a later H build that was redacted
-comment|Later re-added in the 2.7.2A release
-
-comment|hidden for the 2.9P release, which eliminates the campus variable.
-comment|enterText|id-Campus(Enter A for Ann Arbor and D for Dearborn):1|A
-enterText|id-Subject:1|Testing
-enterText|id-Course:1|$creationCourseNum2
-enterText|id-Section:1|001
-enterText|uniqname|$instUser
-
-click|Continue
-verifyText|Request Site Access
-verifyText|$site
-verifyText|$creationCourseNum2
-click|Add Class(es)
-
-comment|Should be on the participant page.
-verifyText|$providerID1
-verifyText|$providerID2
-verifyText|$site
-verifyText|A basic course created during automated testing.
-verifyText|$instDisplayName
-verifyText|Can read content, and add content
+verifyTextNotPresent|Edit Class Roster(s)
 
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText

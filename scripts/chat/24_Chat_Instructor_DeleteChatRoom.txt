@@ -1,0 +1,39 @@
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|loginSubmit
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Chat Room 
+verifyText|Currently viewing messages for 'Secondary Chat Room'
+
+click|Options
+verifyText|Manage Rooms
+verifyText|Main Chat Room
+verifyText|Secondary Chat Room
+
+click|Delete|2
+verifyText|Are you sure you want to permanently delete this chat room?
+verifyText|Secondary Chat Room
+
+click|Delete
+verifyText|Main Chat Room
+
+click|Set as Default
+verifyText|Main Chat Room
+
+click|Logout
+verifyText|Are you sure you want to log out?
+
+click|logout
+verifyText|$logoutText

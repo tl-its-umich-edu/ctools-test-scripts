@@ -1,0 +1,48 @@
+comment|Customize tabs in preferences as instructor.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+comment|make sure that the invisible site doesn't show up
+verifyTextNotPresent|Invisible Site
+
+comment|Make sure that the invisible site does show up in your tab preferences
+click|Preferences
+verifyText|Customize Tabs
+verifyText|Invisible Site
+
+comment|make an invisible site visible and check tab
+comment|clickXpath|//div[contains(@class, 'ui-draggable') and contains(normalize-space(), 'Invisible Site')]
+comment|enterActionKeys|{ctrl}+{left}
+
+comment|click|Update Preferences
+
+comment|click|Home
+comment|verifyText|Invisible Site
+
+comment|now make visible tab invisible and check
+comment|click|Preferences
+comment|verifyText|Customize Tabs
+comment|verifyText|Drag and drop items with the mouse
+comment|clickXpath|//div[contains(@class, 'ui-draggable') and contains(normalize-space(), 'Invisible Site')]
+comment|enterActionKeys|{ctrl}+{right}
+
+comment|click|Update Preferences
+
+click|Community Announcements
+verifyTextNotPresent|Invisible Site
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

@@ -1,0 +1,52 @@
+
+openURL|$url
+verifyText|$gatewayText
+
+click|ctoolsLogin
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Resources
+verifyText|$instDisplayName
+verifyText|Resources
+
+click|Citation folder
+verifyText|Resources / Citation folder
+verifyText|Automated Test Citations
+
+click|Actions|2
+
+click|Edit Citation List
+verifyText|Edit Citation List
+verifyText|Automated Test Citations
+
+click|Add Citations to List
+verifyText|Add Citations
+
+click|Import Citations
+wait|2
+comment|verifyText|Import Citations
+verifyText|Please select an RIS file to upload or enter the text of an RIS file directly into the text area below.
+uploadFile|citation.ris
+
+click|Import
+wait|2
+
+verifyText|Blood-brain barrier breach following cortical contusion in the rat
+verifyText|Baldwin,S.A.;Fugaccia,I.;Brown,D.R.;Brown,L.V.; and Scheff,S.W. J.Neurosurg., 85 1996. 476-481. 
+
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

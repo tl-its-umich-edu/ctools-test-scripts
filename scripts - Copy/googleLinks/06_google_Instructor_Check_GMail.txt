@@ -1,0 +1,33 @@
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|M+Google
+comment|Should pop-up the list of google links
+click|GMail
+
+comment|This should launch the gmail interface
+waitForPopUp|30
+verifyText|$instUser@umich.edu
+verifyText|Mail
+verifyText|Inbox
+
+comment|Once we have confirmed the gmail window, shut it down and log out.
+closePopUp|
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText
+

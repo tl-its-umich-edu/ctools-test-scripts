@@ -1,0 +1,60 @@
+comment|Modify resource in drop box and check as instructor.
+
+application|dropbox
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Drop Box
+verifyText|$instDisplayName
+verifyText|Drop Box
+verifyText|individual dropboxes with recent changes:
+verifyText|testfile_10MB
+verifyText|10 MB
+
+click|Actions|4
+
+click|Edit Details|4
+verifyText|Edit Details 
+verifyText|Change the resource's details and then choose 'Update' at the bottom
+enterText|Description|This is a test file of size 10MB
+
+click|Update
+verifyText|$instDisplayName
+verifyText|Drop Box
+verifyText|individual dropboxes with recent changes:
+verifyText|testfile_10MB
+verifyText|10 MB
+
+comment|check that the changes have been made
+click|Actions|4
+
+click|Edit Details|4
+verifyText|Edit Details 
+verifyText|Change the resource's details and then choose 'Update' at the bottom
+verifyText|This is a test file of size 10MB
+
+click|Cancel
+verifyText|$instDisplayName
+verifyText|Drop Box
+verifyText|individual dropboxes with recent changes:
+verifyText|testfile_10MB
+verifyText|10 MB
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

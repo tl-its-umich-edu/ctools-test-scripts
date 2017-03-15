@@ -3,16 +3,8 @@ comment|Check gateway content.
 openURL|$url
 verifyText|$gatewayText
 
-verifyText|Students - See All of Your Courses
-verifyText|Pilot Instructor Information
-verifyText|About the Pilot
-verifyText|Student Help Guides
-verifyText|Canvas Workshops
-
-verifyText|Get Help
-verifyText|Browse Course Sites
-verifyText|CTools Help Guide
-verifyText|Frequently Asked Questions
+verifyText|Organize your academic life
+verifyText|Quick Start Faculty Tutorial
 
 verifyText|University of Michigan
 verifyText|Contact Us

@@ -1,0 +1,34 @@
+comment|Check help text as instructor.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|doLogin
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Engineering Honor Code
+verifyText|$instDisplayName
+verifyText|Engineering Honor Code
+verifyText|Click the Options item in the toolbar to enter your class specific honor policies here.
+
+click|Help for Engineering Honor Code
+waitForPopup|30
+verifyText|Engineering Honor Code Tool
+verifyText|Use this area to paste in the honor code policy you use for this class. You can also include any additional information about how you run your class with respect to the honor policy.
+closePopUp|
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|$logoutText

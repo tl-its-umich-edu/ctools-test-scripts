@@ -1,0 +1,36 @@
+comment|Remove mprint cruft so next test run runs accordingly.
+
+openURL|$url
+verifyText|$gatewayText
+click|ctoolsLogin
+
+verifyText|$kerberosLoginPageText
+enterText|login|$instUser
+enterText|password|$instPass
+
+click|loginSubmit
+verifyText|Assignments & Events
+verifyText|Recent Activity
+
+click|$site
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Resources
+verifyText|$instDisplayName
+verifyText|Resources
+
+selectCheckbox|selectall
+
+click|Remove
+verifyText|MPrint Folder
+verifyText|Are you sure you want to remove
+
+click|Remove
+verifyTextNotPresent|MPrint Folder
+
+click|Logout
+verifyText|Are you sure you want to log out?
+
+click|logout
+verifyText|$logoutText

@@ -7,7 +7,7 @@ verifyText|$kerberosLoginPageText
 enterText|login|$studUser
 enterText|password|$studPass
 
-click|doLogin
+click|loginSubmit
 verifyText|Assignments & Events
 verifyText|Recent Activity
 
@@ -23,28 +23,10 @@ verifyText|A project site meant to be used as a source for duplication during te
 verifyText|Can read, revise, delete, and add their own content to a site
 
 comment|Duplicate Site
-click|Duplicate Site
-verifyText|Duplicate site
-verifyText|$projDupeSource
-enterText|Site Title|$projDupeSite
-
-comment|This duplicates the site, but takes you back to the last page
-click|Duplicate
-verifyText|$projDupeSource
-verifyText|$studUser
-verifyText|A project site meant to be used as a source for duplication during testing
-verifyText|Organizer
-verifyText|Can read, revise, delete, and add their own content to a site
-
-click|Return to Sites List
-verifyText|$projDupeSite
-
-comment|Open site to make sure it exists.
-click|$projDupeSite
-verifyText|A project site meant to be used as a source for duplication during testing
+verifyTextNotPresent|Duplicate Site
 
 click|Logout
-verifyText|You are about to log out
+verifyText|Are you sure you want to log out?
 
-click|Log Out
+click|logout
 verifyText|$logoutText
