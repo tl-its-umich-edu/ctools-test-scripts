@@ -285,6 +285,8 @@ public class TestManager {
 			// then verify the scripts within the list exist before proceeding.
 			while ((line = testListFilePointer.readLine()) != null) {
 				if (!line.isEmpty()) {
+
+					line = line.trim();
 					
 					// read the target file from one line of the test list.
 					FileInputStream stream = new FileInputStream(new File(line));
