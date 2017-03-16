@@ -674,21 +674,22 @@ public class TestManager {
 				
 		System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, driverPath);
 		
-		//ChromeDriverService service = ChromeDriverService.createDefaultService();
-		
-		ChromeOptions options = new ChromeOptions();
-
 		// The following option is ineffectual.  Workaround is to set the downloadDirectory
 		// equal to the user's current download directory setting
 		HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 		chromePrefs.put("profile.default_content_settings.popups", 0);
+		chromePrefs.put("download.prompt_for_download", "false");
 		chromePrefs.put("download.default_directory", downloadDirectory);
+
+		ChromeOptions options = new ChromeOptions();		
 		options.setExperimentalOption("prefs", chromePrefs);
+		options.addArguments("--test-type");
+
 		DesiredCapabilities cap = DesiredCapabilities.chrome();
 		cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 		cap.setCapability(ChromeOptions.CAPABILITY, options);
+
 		//WebDriver driver = new ChromeDriver(cap);
-		
 		//driver = new ChromeDriver(service, options);
 		driver = new ChromeDriver(cap);
 		}

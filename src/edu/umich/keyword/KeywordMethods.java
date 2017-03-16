@@ -373,15 +373,15 @@ public class KeywordMethods {
 			// This clears all text from the existing field before typing the
 			// new...
 			String os = System.getProperty("os.name");
-			//if (os.equals("Windows Server")){objectInQuestion.sendKeys(Keys.chord(Keys.CONTROL, "a"),
+			//3/15/2017 (ckretler): confirmed that the second version in the
+			//else clause works for both firefox and chrome on linux.  If this works
+			//on windows too, we can simplify this section by removing the if and just
+			//using the second section.  The first section does not work on linux.
 			if (os.startsWith("Windows")){
 				objectInQuestion.sendKeys(Keys.chord(Keys.CONTROL, "a"), textToEnter);
-				//2/13/2017 (ckretler): geckoDriver (firefox) has trouble with the complex
-				//sendKeys command provided above.  Needed to simplify as exemplified below:
-				//objectInQuestion.sendKeys(textToEnter);
 			} else {
 				objectInQuestion.clear();
-				objectInQuestion.sendKeys(Keys.chord(Keys.COMMAND, "a"), textToEnter);
+				objectInQuestion.sendKeys(textToEnter);
 			}
 			
 		

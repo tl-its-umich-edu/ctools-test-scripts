@@ -62,10 +62,10 @@ verifyValue|allowResToggle|true
 verifyText|Number of resubmissions allowed
 selectList|Number of resubmissions allowed|Unlimited
 selectList|allow_resubmit_closeMonth|DEC
-selectList|allow_resubmit_closeYear|2016
+selectList|allow_resubmit_closeYear|2020
 verifyValue|Number of resubmissions allowed|Unlimited
 verifyValue|allow_resubmit_closeMonth|DEC
-verifyValue|allow_resubmit_closeYear|2016
+verifyValue|allow_resubmit_closeYear|2020
 
 
 click|Save and Release to Student
