@@ -10,6 +10,7 @@ C:/ctools-test-scripts/scripts/preferences/01PreferencesInstructorChangeLanguage
 C:/ctools-test-scripts/scripts/preferences/02PreferencesInstructorCustomizeVisibleTabs.txt
 C:/ctools-test-scripts/scripts/preferences/03PreferencesInstructorReviewNotifications.txt
 
+c:/ctools-test-scripts/scripts/assignments/00_assignments_InstructorDeleteAll.txt
 c:/ctools-test-scripts/scripts/assignments/01_assignments_InstructorCreate_LongAssignment.txt
 c:/ctools-test-scripts/scripts/assignments/02_assignments_InstructorCreate_DraftAssignment.txt
 c:/ctools-test-scripts/scripts/assignments/04_assignments_InstructorUpdate_DraftAssignment.txt
@@ -22,7 +23,6 @@ c:/ctools-test-scripts/scripts/assignments/11_assignments_StudentCheck_Group1Ass
 c:/ctools-test-scripts/scripts/assignments/12_assignments_StudentCheck_Group2Assignment.txt
 c:/ctools-test-scripts/scripts/assignments/13_assignments_Student_CheckHelp.txt
 c:/ctools-test-scripts/scripts/assignments/14_assignments_Instructor_CheckHelp.txt
-c:/ctools-test-scripts/scripts/assignments/15_assignments_InstructorDeleteAll.txt
 
 c:/ctools-test-scripts/scripts/chat/01_Chat_Instructor_AddRoom.txt
 c:/ctools-test-scripts/scripts/chat/02_Chat_Instructor_SetNewRoomAsDefault.txt
